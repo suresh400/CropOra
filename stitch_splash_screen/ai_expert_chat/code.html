@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cropora AI Expert Chat</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2f7f33",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .message-shadow {
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+<div class="flex flex-col h-screen max-w-md mx-auto bg-background-light dark:bg-background-dark relative overflow-hidden">
+<!-- TopAppBar -->
+<header class="flex items-center justify-between p-4 bg-white dark:bg-slate-900 border-b border-primary/10 sticky top-0 z-10">
+<div class="flex items-center gap-3">
+<button class="p-2 hover:bg-primary/10 rounded-full transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-100">arrow_back</span>
+</button>
+<div class="flex items-center gap-3">
+<div class="relative">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden border border-primary/20">
+<img alt="AI Avatar" class="w-full h-full object-cover" data-alt="Friendly AI robot assistant avatar profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_8Sg1DZcDXfxmu8quvyOZtJ-Tr7m5f8PMCEZJ32-YUmDwu1p3RinLKnOhKW0hqRnVEVCd7OMm7xkI1kx9ENrMZJcphTOE4yDqM8lzW4ZVJC9RkeCnPGIZwfL1L5mE73f7grVPUse25yAaXx1oGQDpyMqrn4b_PbsLo-sF8cnsXUyPAn61q4fBxnNXMo8fOm3jJ1eQp5MlgPveDnbuyNtOpfdSzaS-rlbPQI_vrygSdtuTndRfnB_H3ctQyIaezaGfVGDCUlUf9Umq"/>
+</div>
+<div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white dark:border-slate-900 rounded-full"></div>
+</div>
+<div>
+<h1 class="font-bold text-base leading-tight">Cropora AI Expert</h1>
+<p class="text-[10px] uppercase tracking-wider text-primary font-bold">Online Now</p>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-2 hover:bg-primary/10 rounded-full">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">info</span>
+</button>
+</div>
+</header>
+<!-- Chat History -->
+<main class="flex-1 overflow-y-auto p-4 space-y-6">
+<div class="text-center">
+<span class="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Today</span>
+</div>
+<!-- AI Message -->
+<div class="flex items-end gap-2 max-w-[85%]">
+<div class="w-8 h-8 rounded-full bg-primary/20 flex-shrink-0 flex items-center justify-center overflow-hidden">
+<img alt="Cropora AI" class="w-full h-full object-cover" data-alt="Green plant icon representative of AI" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh3EROrZUb2kwrj0vCmm-crmgl9yVIGOg-hdVZYKv437Xxal-KbyVqfNntAax70t2iEvRRXSQLL-Xo-Aofmc5f5illrF8lEx5eOK91cI3IvD-NYfAYl5Lp7nj5yq6-phhieMcZGJkTeBPhcYscBc6Sh_JB7PwCqSMSpklUEBACjE1_yvVWDSgWmkux3qg5yjI12_DfFhJjPmRJGpLLgB-mzqbfJimI5BIxluuCsx7zxEZSWAwhUfXKOuWR57DPf7c8H1ULB6jwuIot"/>
+</div>
+<div class="bg-white dark:bg-slate-800 p-3 rounded-2xl rounded-bl-none message-shadow border border-primary/5">
+<p class="text-sm leading-relaxed">Hello Farmer! I'm your Cropora AI Expert. I can help you identify pests, check soil health, or give weather advice. How is your farm doing today?</p>
+<span class="text-[10px] text-slate-400 mt-1 block">09:12 AM</span>
+</div>
+</div>
+<!-- User Message -->
+<div class="flex items-end justify-end gap-2 ml-auto max-w-[85%]">
+<div class="bg-primary text-white p-3 rounded-2xl rounded-br-none message-shadow">
+<p class="text-sm leading-relaxed">My rice leaves are turning yellow in the corner of the field. What should I do?</p>
+<span class="text-[10px] text-white/70 mt-1 block text-right">09:15 AM</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-slate-200 flex-shrink-0 flex items-center justify-center overflow-hidden">
+<img alt="Farmer" class="w-full h-full object-cover" data-alt="Portrait of a friendly farmer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3LZ1V6Sl2Et2__6BljG6ejZrOXhaqApMcol7L4Vxj8f8Snj5ZKC5fWEs4goHkSpOoCMoq6A6jYRxPS6fyVd4M498mDp5mW3szjr8Qs-GROm2i6S4vW1EjOUvwZh8a2FV9tWBLSK2kbk0DjwBZJUuyYMl4G-NlbiZaDy9GEBXJJEmn6I1_dOq2_h6a7Jn9COB7U6xOEcob23TJ-bi2KgOLAaH1olEaW5hb7p-cgoVmvGFRV4oPHUbLFc2Y-yOl2XPC6pmcZISV4wpR"/>
+</div>
+</div>
+<!-- AI Message with Image Request -->
+<div class="flex items-end gap-2 max-w-[85%]">
+<div class="w-8 h-8 rounded-full bg-primary/20 flex-shrink-0 flex items-center justify-center overflow-hidden">
+<img alt="Cropora AI" class="w-full h-full object-cover" data-alt="Green plant icon representative of AI" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRw8w6W7JBAfXbJrMXnbE-qLSmasJNPbX0Rwqn47VB80tyGruABNnrA91rgmk5s5vYUYjPpyVLjlhTAvRlWkV0quEVjXfgZv1ReFrKzlSm4YQoXa313WarZ01fq1utIkN4gnW3czf9GkYYoMZIUnZsmRYKT7NrFufq3-nNxw9W35uvMZXunmYJeDl8uqJ5EOFxk0SqfSoKPI5t64gjHeIg2hb9JHYWftArdlMVQUAvGXBC9YLQ_vV4y0FhJLCoTcR3iirID8LgjukD"/>
+</div>
+<div class="bg-white dark:bg-slate-800 p-3 rounded-2xl rounded-bl-none message-shadow border border-primary/5">
+<p class="text-sm leading-relaxed">Yellowing in rice can be caused by Nitrogen deficiency or Tungro virus. To be sure, could you please take a clear photo of the leaves using the camera icon below?</p>
+<div class="mt-3 p-2 bg-primary/5 rounded-lg border border-primary/10 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">tips_and_updates</span>
+<p class="text-xs italic text-slate-600 dark:text-slate-400">Tip: Ensure the photo is taken in bright daylight for better accuracy.</p>
+</div>
+<span class="text-[10px] text-slate-400 mt-1 block">09:16 AM</span>
+</div>
+</div>
+</main>
+<!-- Quick Suggestions & Input Area -->
+<footer class="bg-white dark:bg-slate-900 p-4 border-t border-primary/10 space-y-4">
+<!-- Quick Suggestions -->
+<div class="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+<button class="whitespace-nowrap px-4 py-2 bg-primary/10 text-primary text-sm font-semibold rounded-full hover:bg-primary/20 transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">bug_report</span> Identify Pest
+                </button>
+<button class="whitespace-nowrap px-4 py-2 bg-primary/10 text-primary text-sm font-semibold rounded-full hover:bg-primary/20 transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">science</span> Check Fertilizer
+                </button>
+<button class="whitespace-nowrap px-4 py-2 bg-primary/10 text-primary text-sm font-semibold rounded-full hover:bg-primary/20 transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">cloud</span> Weather Advice
+                </button>
+<button class="whitespace-nowrap px-4 py-2 bg-primary/10 text-primary text-sm font-semibold rounded-full hover:bg-primary/20 transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">grass</span> Ask about Rice
+                </button>
+</div>
+<!-- Input Area -->
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1 bg-background-light dark:bg-slate-800 rounded-full px-3 flex-1 border border-primary/10 focus-within:border-primary transition-colors">
+<button class="p-2 text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">add_a_photo</span>
+</button>
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-sm py-3 px-1 text-slate-900 dark:text-slate-100" placeholder="Type your farm question..." type="text"/>
+<button class="p-2 text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">mic</span>
+</button>
+</div>
+<button class="bg-primary text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg shadow-primary/20 hover:brightness-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</footer>
+</div>
+</body></html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cropora - Alerts &amp; Notifications</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2f7f33",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#141e15",
+                        "critical": "#dc2626",
+                        "moderate": "#ca8a04",
+                        "normal": "#16a34a",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-tab {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header Section -->
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 pt-8 pb-4">
+<div class="flex items-center justify-between mb-2">
+<h1 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Alerts &amp; Notifications</h1>
+<button class="text-primary font-semibold text-sm hover:opacity-80 transition-opacity">
+                Mark all as read
+            </button>
+</div>
+<div class="flex gap-2 mt-4 overflow-x-auto pb-2 no-scrollbar">
+<span class="px-4 py-1.5 bg-primary text-white rounded-full text-xs font-medium">All (12)</span>
+<span class="px-4 py-1.5 bg-background-light border border-primary/20 text-slate-600 rounded-full text-xs font-medium">Critical (2)</span>
+<span class="px-4 py-1.5 bg-background-light border border-primary/20 text-slate-600 rounded-full text-xs font-medium">Weather</span>
+<span class="px-4 py-1.5 bg-background-light border border-primary/20 text-slate-600 rounded-full text-xs font-medium">Pests</span>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 px-4 space-y-4 pb-32">
+<!-- Today Section -->
+<div class="mt-2">
+<h2 class="text-sm font-bold text-primary uppercase tracking-wider px-2 mb-3">Today</h2>
+<!-- Critical Alert -->
+<div class="group relative flex flex-col gap-3 p-5 rounded-xl bg-red-50/50 dark:bg-red-900/10 shadow-sm border-l-[6px] border-critical mb-4">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-critical text-white rounded-lg">
+<span class="material-symbols-outlined text-xl">thermostat</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<p class="text-[10px] font-bold text-critical uppercase tracking-wider">Critical Alert</p>
+<span class="px-1.5 py-0.5 bg-critical/10 text-critical text-[10px] font-bold rounded uppercase">42°C predicted</span>
+</div>
+<p class="text-xs text-slate-500 mt-0.5">2 hours ago</p>
+</div>
+</div>
+</div>
+<div>
+<h3 class="font-bold text-xl text-slate-900 dark:text-slate-100">Heatwave Alert</h3>
+<p class="text-sm text-slate-600 dark:text-slate-300 mt-1.5 leading-relaxed">
+                    Extreme temperature expected. Increase irrigation frequency for the North sector immediately.
+                    <a class="text-critical font-bold hover:underline block mt-1" href="#">View Details</a>
+</p>
+</div>
+<div class="flex gap-3 pt-2">
+<button class="bg-critical text-white text-xs font-bold py-2.5 px-6 rounded-full shadow-lg shadow-critical/20">Adjust Irrigation</button>
+<button class="bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs font-bold py-2.5 px-6 rounded-full border border-slate-200 dark:border-slate-700">Dismiss</button>
+</div>
+</div>
+<!-- Moderate Alert -->
+<div class="group relative flex flex-col gap-3 p-5 rounded-xl bg-yellow-50/50 dark:bg-yellow-900/10 shadow-sm border-l-[6px] border-moderate mb-4">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-moderate text-white rounded-lg">
+<span class="material-symbols-outlined text-xl">pest_control</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<p class="text-[10px] font-bold text-moderate uppercase tracking-wider">Moderate Risk</p>
+<span class="px-1.5 py-0.5 bg-moderate/10 text-moderate text-[10px] font-bold rounded uppercase">75% Probability</span>
+</div>
+<p class="text-xs text-slate-500 mt-0.5">5 hours ago</p>
+</div>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex-1">
+<h3 class="font-bold text-xl text-slate-900 dark:text-slate-100">Pest Risk</h3>
+<p class="text-sm text-slate-600 dark:text-slate-300 mt-1.5 leading-relaxed">High humidity might increase pest activity in your rice crop.</p>
+<div class="flex gap-2 mt-4">
+<button class="bg-moderate text-white text-xs font-bold py-2 px-4 rounded-full">Treatment Guide</button>
+<button class="text-slate-600 dark:text-slate-400 text-xs font-bold py-2 px-2 hover:underline">Dismiss</button>
+</div>
+</div>
+<div class="w-24 h-24 rounded-xl bg-cover bg-center shrink-0 border-2 border-white dark:border-slate-700 shadow-md" data-alt="Close up of a rice leaf with water droplets" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDvKpgF_F_e_jbH3XOd_bjBQQb1vky9ABbaAI_RM7zsO4IQVNlmqrC-CpnPwXnacnXvjCiScqJQ6PYJ77Ex6L9GOtLXlpylQ0rqN_q0cyhBhwMBf7BJGiioTYIEiXrpTUW0Lfz1VAF9FQE7wRsLEvHBcfs9z0LOlctfLC9Du0hZlWXNFefHeOBfWr7uGVjf9ge08woVd3iQmFUmb3WiI9Gsibpm9fyd3D8VUfJ5mC6YErMH9NfTMKQcb_D3ooBDHjj4KdrUORDfAsiz')"></div>
+</div>
+</div>
+</div>
+<!-- Yesterday Section -->
+<div>
+<h2 class="text-sm font-bold text-primary uppercase tracking-wider px-2 mb-3">Yesterday</h2>
+<!-- Normal Reminder -->
+<div class="group relative flex flex-col gap-3 p-5 rounded-xl bg-green-50/50 dark:bg-green-900/10 shadow-sm border-l-[6px] border-normal mb-4">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-normal text-white rounded-lg">
+<span class="material-symbols-outlined text-xl">agriculture</span>
+</div>
+<div>
+<p class="text-[10px] font-bold text-normal uppercase tracking-wider">Scheduled Reminder</p>
+<p class="text-xs text-slate-500 mt-0.5">Yesterday, 4:30 PM</p>
+</div>
+</div>
+</div>
+<div>
+<h3 class="font-bold text-xl text-slate-900 dark:text-slate-100">Fertilizer Reminder</h3>
+<p class="text-sm text-slate-600 dark:text-slate-300 mt-1.5 leading-relaxed">
+                    Scheduled application for <b>Urea (46-0-0)</b> tomorrow for Maize Plot B. 
+                    <span class="bg-normal/10 text-normal px-1.5 py-0.5 rounded font-bold">Apply 50kg</span>. Check stock levels.
+                </p>
+</div>
+<div class="pt-2">
+<button class="w-full bg-normal text-white text-xs font-bold py-2.5 rounded-full">Mark as Done</button>
+</div>
+</div>
+<!-- Irrigation Log -->
+<div class="group relative flex flex-col gap-3 p-4 rounded-xl bg-white dark:bg-slate-800 shadow-sm border-l-4 border-primary/30 opacity-75">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-primary/10 text-primary rounded-lg">
+<span class="material-symbols-outlined">opacity</span>
+</div>
+<div>
+<p class="text-xs font-bold text-primary/60 uppercase tracking-tight">System Update</p>
+<p class="text-xs text-slate-500">Yesterday, 10:00 AM</p>
+</div>
+</div>
+</div>
+<div>
+<h3 class="font-bold text-lg text-slate-400 dark:text-slate-500 italic">Irrigation Completed</h3>
+<p class="text-sm text-slate-400 dark:text-slate-500">Cycle 14 successfully finished for all active sectors.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 px-6 pb-6 pt-3 flex justify-between items-center z-20">
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">potted_plant</span>
+<span class="text-[10px] font-bold">Crop</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">water_drop</span>
+<span class="text-[10px] font-bold">Fertilizer</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined active-tab">notifications_active</span>
+<span class="text-[10px] font-bold">Alerts</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold">Profile</span>
+</a>
+</nav>
+</body></html>

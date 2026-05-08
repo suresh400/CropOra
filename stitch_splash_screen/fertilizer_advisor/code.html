@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#2f7f33",
+              "background-light": "#f6f8f6",
+              "background-dark": "#141e15",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<title>Cropora - Fertilizer Advisor</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Top Navigation Header -->
+<header class="flex items-center bg-white dark:bg-slate-900/50 p-4 sticky top-0 z-10 border-b border-primary/10">
+<div class="text-primary flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<div class="flex-1 ml-4">
+<h1 class="text-lg font-bold leading-tight tracking-tight">Fertilizer Advisor</h1>
+<p class="text-xs text-slate-500 dark:text-slate-400">Cropora Smart Agriculture</p>
+</div>
+<div class="text-primary flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
+<span class="material-symbols-outlined">history</span>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto pb-24">
+<!-- Input Section -->
+<section class="p-4 space-y-6">
+<div class="space-y-4">
+<h3 class="text-base font-bold text-primary">Crop &amp; Soil Context</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<label class="flex flex-col flex-1">
+<span class="text-sm font-medium pb-2 ml-1">Crop Type</span>
+<select class="form-input flex w-full rounded-xl text-slate-900 border border-primary/20 bg-white focus:ring-primary focus:border-primary h-14 p-4 text-base font-normal">
+<option value="corn">Corn (Maize)</option>
+<option value="wheat">Wheat</option>
+<option value="rice">Rice</option>
+<option value="soybean">Soybean</option>
+</select>
+</label>
+<label class="flex flex-col flex-1">
+<span class="text-sm font-medium pb-2 ml-1">Soil Type</span>
+<select class="form-input flex w-full rounded-xl text-slate-900 border border-primary/20 bg-white focus:ring-primary focus:border-primary h-14 p-4 text-base font-normal">
+<option value="loamy">Loamy Soil</option>
+<option value="clay">Clay Soil</option>
+<option value="sandy">Sandy Soil</option>
+</select>
+</label>
+</div>
+</div>
+<div class="space-y-4">
+<span class="text-sm font-medium ml-1">Current Growth Stage</span>
+<div class="flex h-12 items-center justify-center rounded-full bg-primary/10 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-full px-2 has-[:checked]:bg-white has-[:checked]:shadow-sm has-[:checked]:text-primary text-slate-600 text-xs font-semibold transition-all">
+<span class="truncate">Seedling</span>
+<input class="hidden" name="growth_stage" type="radio" value="Seedling"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-full px-2 has-[:checked]:bg-white has-[:checked]:shadow-sm has-[:checked]:text-primary text-slate-600 text-xs font-semibold transition-all">
+<span class="truncate">Vegetative</span>
+<input checked="" class="hidden" name="growth_stage" type="radio" value="Vegetative"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-full px-2 has-[:checked]:bg-white has-[:checked]:shadow-sm has-[:checked]:text-primary text-slate-600 text-xs font-semibold transition-all">
+<span class="truncate">Flowering</span>
+<input class="hidden" name="growth_stage" type="radio" value="Flowering"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-full px-2 has-[:checked]:bg-white has-[:checked]:shadow-sm has-[:checked]:text-primary text-slate-600 text-xs font-semibold transition-all">
+<span class="truncate">Maturity</span>
+<input class="hidden" name="growth_stage" type="radio" value="Maturity"/>
+</label>
+</div>
+</div>
+<!-- NPK Input -->
+<div class="bg-primary/5 rounded-xl p-4 border border-primary/10">
+<h3 class="text-sm font-bold text-primary mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">science</span>
+                    Current NPK Levels (mg/kg)
+                </h3>
+<div class="grid grid-cols-3 gap-3">
+<div class="flex flex-col">
+<span class="text-[10px] font-bold text-slate-500 uppercase ml-1">Nitrogen (N)</span>
+<input class="w-full h-12 rounded-lg border-primary/20 bg-white text-center font-bold text-primary focus:ring-primary" placeholder="45" type="number"/>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] font-bold text-slate-500 uppercase ml-1">Phos (P)</span>
+<input class="w-full h-12 rounded-lg border-primary/20 bg-white text-center font-bold text-primary focus:ring-primary" placeholder="12" type="number"/>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] font-bold text-slate-500 uppercase ml-1">Potass (K)</span>
+<input class="w-full h-12 rounded-lg border-primary/20 bg-white text-center font-bold text-primary focus:ring-primary" placeholder="30" type="number"/>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">auto_fix_high</span>
+                Generate Recommendation
+            </button>
+<hr class="border-primary/10"/>
+<!-- Result Section -->
+<div class="space-y-4">
+<h3 class="text-base font-bold text-slate-900">Recommended Fertilizer</h3>
+<div class="bg-white rounded-xl border border-primary/10 p-5 shadow-sm relative overflow-hidden">
+<div class="absolute top-0 right-0 p-3">
+<div class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-1 rounded-full uppercase">Optimal</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="size-14 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">agriculture</span>
+</div>
+<div>
+<h4 class="text-xl font-bold text-primary">Urea (46% Nitrogen)</h4>
+<p class="text-sm text-slate-500">Essential for rapid vegetative growth</p>
+<div class="mt-4 flex gap-6">
+<div>
+<p class="text-[10px] font-bold text-slate-400 uppercase">Quantity</p>
+<p class="text-lg font-bold">120 kg/ha</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-slate-400 uppercase">Timing</p>
+<p class="text-lg font-bold">Early Morning</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Schedule Timeline -->
+<div class="space-y-4">
+<h3 class="text-base font-bold text-slate-900">Application Schedule</h3>
+<div class="space-y-0 relative before:absolute before:left-[19px] before:top-2 before:bottom-2 before:w-[2px] before:bg-primary/20">
+<!-- Day 1 -->
+<div class="relative pl-12 pb-6">
+<div class="absolute left-0 top-0 size-10 rounded-full bg-primary border-4 border-white flex items-center justify-center text-white z-10">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+<div class="bg-white/50 p-3 rounded-lg border border-primary/5">
+<p class="text-xs font-bold text-primary uppercase">Day 1 - Today</p>
+<h5 class="font-bold">First Application (Urea)</h5>
+<p class="text-xs text-slate-500">Apply 40kg/ha at the base of the plant.</p>
+</div>
+</div>
+<!-- Day 14 -->
+<div class="relative pl-12 pb-6">
+<div class="absolute left-0 top-0 size-10 rounded-full bg-primary/20 border-4 border-white flex items-center justify-center text-primary z-10">
+<span class="material-symbols-outlined text-sm">schedule</span>
+</div>
+<div class="bg-white/50 p-3 rounded-lg border border-primary/5">
+<p class="text-xs font-bold text-slate-400 uppercase">Day 14 - June 24</p>
+<h5 class="font-bold">Second Application (Urea + KCL)</h5>
+<p class="text-xs text-slate-500">Secondary dose for stem strengthening.</p>
+</div>
+</div>
+<!-- Day 30 -->
+<div class="relative pl-12">
+<div class="absolute left-0 top-0 size-10 rounded-full bg-primary/20 border-4 border-white flex items-center justify-center text-primary z-10">
+<span class="material-symbols-outlined text-sm">eco</span>
+</div>
+<div class="bg-white/50 p-3 rounded-lg border border-primary/5">
+<p class="text-xs font-bold text-slate-400 uppercase">Day 30 - July 10</p>
+<h5 class="font-bold">Flowering Boost (DAP)</h5>
+<p class="text-xs text-slate-500">Prepare crop for reproductive stage.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full bg-white border-t border-primary/10 px-4 pb-6 pt-2 flex justify-between items-center z-20">
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-medium uppercase tracking-wider">Home</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">science</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Advisor</p>
+</a>
+<div class="size-14 -mt-10 bg-primary rounded-full shadow-lg shadow-primary/30 flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-3xl">add</span>
+</div>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">psychology_alt</span>
+<p class="text-[10px] font-medium uppercase tracking-wider">Expert</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-medium uppercase tracking-wider">Profile</p>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,100 @@
+|--- rainfall <= 30.39
+|   |--- class: muskmelon
+|--- rainfall >  30.39
+|   |--- K <= 140.00
+|   |   |--- humidity <= 73.62
+|   |   |   |--- humidity <= 27.69
+|   |   |   |   |--- K <= 50.00
+|   |   |   |   |   |--- class: kidneybeans
+|   |   |   |   |--- K >  50.00
+|   |   |   |   |   |--- class: chickpea
+|   |   |   |--- humidity >  27.69
+|   |   |   |   |--- N <= 59.50
+|   |   |   |   |   |--- rainfall <= 82.08
+|   |   |   |   |   |   |--- rainfall <= 59.80
+|   |   |   |   |   |   |   |--- humidity <= 60.03
+|   |   |   |   |   |   |   |   |--- class: mothbeans
+|   |   |   |   |   |   |   |--- humidity >  60.03
+|   |   |   |   |   |   |   |   |--- P <= 52.00
+|   |   |   |   |   |   |   |   |   |--- class: mothbeans
+|   |   |   |   |   |   |   |   |--- P >  52.00
+|   |   |   |   |   |   |   |   |   |--- class: lentil
+|   |   |   |   |   |   |--- rainfall >  59.80
+|   |   |   |   |   |   |   |--- P <= 57.50
+|   |   |   |   |   |   |   |   |--- humidity <= 63.89
+|   |   |   |   |   |   |   |   |   |--- N <= 48.50
+|   |   |   |   |   |   |   |   |   |   |--- class: mothbeans
+|   |   |   |   |   |   |   |   |   |--- N >  48.50
+|   |   |   |   |   |   |   |   |   |   |--- class: blackgram
+|   |   |   |   |   |   |   |   |--- humidity >  63.89
+|   |   |   |   |   |   |   |   |   |--- class: blackgram
+|   |   |   |   |   |   |   |--- P >  57.50
+|   |   |   |   |   |   |   |   |--- humidity <= 58.62
+|   |   |   |   |   |   |   |   |   |--- class: mothbeans
+|   |   |   |   |   |   |   |   |--- humidity >  58.62
+|   |   |   |   |   |   |   |   |   |--- class: blackgram
+|   |   |   |   |   |--- rainfall >  82.08
+|   |   |   |   |   |   |--- P <= 47.50
+|   |   |   |   |   |   |   |--- class: mango
+|   |   |   |   |   |   |--- P >  47.50
+|   |   |   |   |   |   |   |--- class: pigeonpeas
+|   |   |   |   |--- N >  59.50
+|   |   |   |   |   |--- rainfall <= 112.45
+|   |   |   |   |   |   |--- temperature <= 29.21
+|   |   |   |   |   |   |   |--- class: maize
+|   |   |   |   |   |   |--- temperature >  29.21
+|   |   |   |   |   |   |   |--- class: blackgram
+|   |   |   |   |   |--- rainfall >  112.45
+|   |   |   |   |   |   |--- humidity <= 70.42
+|   |   |   |   |   |   |   |--- class: coffee
+|   |   |   |   |   |   |--- humidity >  70.42
+|   |   |   |   |   |   |   |--- class: jute
+|   |   |--- humidity >  73.62
+|   |   |   |--- K <= 25.50
+|   |   |   |   |--- rainfall <= 100.05
+|   |   |   |   |   |--- N <= 99.00
+|   |   |   |   |   |   |--- rainfall <= 75.82
+|   |   |   |   |   |   |   |--- class: mungbean
+|   |   |   |   |   |   |--- rainfall >  75.82
+|   |   |   |   |   |   |   |--- class: maize
+|   |   |   |   |   |--- N >  99.00
+|   |   |   |   |   |   |--- class: cotton
+|   |   |   |   |--- rainfall >  100.05
+|   |   |   |   |   |--- K <= 20.00
+|   |   |   |   |   |   |--- class: orange
+|   |   |   |   |   |--- K >  20.00
+|   |   |   |   |   |   |--- class: coconut
+|   |   |   |--- K >  25.50
+|   |   |   |   |--- P <= 69.50
+|   |   |   |   |   |--- P <= 32.50
+|   |   |   |   |   |   |--- N <= 60.00
+|   |   |   |   |   |   |   |--- rainfall <= 121.77
+|   |   |   |   |   |   |   |   |--- class: pomegranate
+|   |   |   |   |   |   |   |--- rainfall >  121.77
+|   |   |   |   |   |   |   |   |--- class: coconut
+|   |   |   |   |   |   |--- N >  60.00
+|   |   |   |   |   |   |   |--- class: watermelon
+|   |   |   |   |   |--- P >  32.50
+|   |   |   |   |   |   |--- humidity <= 89.96
+|   |   |   |   |   |   |   |--- rainfall <= 199.78
+|   |   |   |   |   |   |   |   |--- ph <= 6.01
+|   |   |   |   |   |   |   |   |   |--- class: rice
+|   |   |   |   |   |   |   |   |--- ph >  6.01
+|   |   |   |   |   |   |   |   |   |--- temperature <= 22.89
+|   |   |   |   |   |   |   |   |   |   |--- class: rice
+|   |   |   |   |   |   |   |   |   |--- temperature >  22.89
+|   |   |   |   |   |   |   |   |   |   |--- class: jute
+|   |   |   |   |   |   |   |--- rainfall >  199.78
+|   |   |   |   |   |   |   |   |--- class: rice
+|   |   |   |   |   |   |--- humidity >  89.96
+|   |   |   |   |   |   |   |--- class: papaya
+|   |   |   |   |--- P >  69.50
+|   |   |   |   |   |--- rainfall <= 74.80
+|   |   |   |   |   |   |--- class: papaya
+|   |   |   |   |   |--- rainfall >  74.80
+|   |   |   |   |   |   |--- class: banana
+|   |--- K >  140.00
+|   |   |--- rainfall <= 87.52
+|   |   |   |--- class: grapes
+|   |   |--- rainfall >  87.52
+|   |   |   |--- class: apple

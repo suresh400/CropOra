@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2f7f33",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Space Grotesk', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .filled-icon { font-variation-settings: 'FILL' 1; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="flex items-center justify-between px-6 py-4 sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-10">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary/20 flex items-center justify-center border border-primary/10 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Profile photo of a smiling Indian farmer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmEi-mjOEZJLM8mG6g695eqoQbjR9SBODwMBcxhPH-kZmTzXYUw7NN_y1Sd0VaqI13Zr8JvUrrG9hB3DmhByi1qiV5ag4pfFYrGSQVvMHo4LHMpDlfhr8XZGlzodrOEWO4KOWHia_CE2JPHTDcCxsqFOMmfQw23uy8LPVBuyTKGXIvEgwh8a3QbND9WHVAtTLwXnHV3IMagkDoxuYiPYoubNQw63ZvsnfUqVuSNLm7b8uWnYUCgTbYifE91nII73HtpFl6Nl_Hsmjd"/>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-primary">Cropora</h1>
+</div>
+<button class="relative p-2 rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-slate-700 dark:text-slate-300">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-red-500 rounded-full border-2 border-background-light"></span>
+</button>
+</header>
+<main class="flex-1 px-6 pb-24 space-y-6">
+<!-- Greeting -->
+<section>
+<h2 class="text-3xl font-bold leading-tight">Good Morning,<br/>Suresh 🌱</h2>
+<p class="text-slate-500 dark:text-slate-400 mt-1">Here is what's happening today.</p>
+</section>
+<!-- Weather Card -->
+<section class="relative overflow-hidden bg-primary text-white rounded-xl p-6 shadow-lg shadow-primary/20">
+<div class="relative z-10 flex justify-between items-start">
+<div>
+<p class="text-primary-100 text-sm font-medium opacity-80">Current Weather</p>
+<h3 class="text-5xl font-bold mt-1">28°C</h3>
+<p class="text-lg font-medium">Sunny</p>
+</div>
+<span class="material-symbols-outlined text-6xl filled-icon">wb_sunny</span>
+</div>
+<div class="relative z-10 mt-6 grid grid-cols-3 gap-2 bg-white/10 backdrop-blur-sm rounded-lg p-3">
+<div class="text-center border-r border-white/20">
+<p class="text-[10px] uppercase tracking-wider opacity-70">Humidity</p>
+<p class="font-bold">65%</p>
+</div>
+<div class="text-center border-r border-white/20">
+<p class="text-[10px] uppercase tracking-wider opacity-70">Rain Prob</p>
+<p class="font-bold">10%</p>
+</div>
+<div class="text-center">
+<p class="text-[10px] uppercase tracking-wider opacity-70">Wind</p>
+<p class="font-bold">12km/h</p>
+</div>
+</div>
+<div class="absolute -right-4 -bottom-4 size-32 bg-white/10 rounded-full blur-3xl"></div>
+</section>
+<!-- Soil Health Summary -->
+<section class="bg-white dark:bg-slate-800/50 rounded-xl p-5 border border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">analytics</span>
+                    Soil Health Summary
+                </h3>
+<span class="text-xs font-bold px-2 py-1 bg-primary/10 text-primary rounded-full">OPTIMAL</span>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<span class="text-sm text-slate-500 dark:text-slate-400">Moisture Content</span>
+<span class="text-sm font-bold">42%</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[42%]"></div>
+</div>
+<div class="grid grid-cols-2 gap-4 pt-2">
+<div class="bg-background-light dark:bg-slate-800 p-3 rounded-lg border border-slate-50 dark:border-slate-700">
+<p class="text-[10px] text-slate-400 uppercase font-bold">pH Level</p>
+<p class="text-lg font-bold">6.5</p>
+</div>
+<div class="bg-background-light dark:bg-slate-800 p-3 rounded-lg border border-slate-50 dark:border-slate-700">
+<p class="text-[10px] text-slate-400 uppercase font-bold">Nitrogen</p>
+<p class="text-lg font-bold">High</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Actions Grid -->
+<section>
+<h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">Quick Actions</h3>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex flex-col items-center justify-center p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm transition-transform active:scale-95">
+<div class="size-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mb-3">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<span class="text-xs font-bold text-center">Crop Recommendations</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm transition-transform active:scale-95">
+<div class="size-12 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center mb-3">
+<span class="material-symbols-outlined">science</span>
+</div>
+<span class="text-xs font-bold text-center">Fertilizer Advisor</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm transition-transform active:scale-95">
+<div class="size-12 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center mb-3">
+<span class="material-symbols-outlined">history</span>
+</div>
+<span class="text-xs font-bold text-center">History Logs</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm transition-transform active:scale-95">
+<div class="size-12 rounded-full bg-green-100 text-green-600 flex items-center justify-center mb-3">
+<span class="material-symbols-outlined">forum</span>
+</div>
+<span class="text-xs font-bold text-center">Chat Support</span>
+</button>
+</div>
+</section>
+<!-- Urgent Alerts -->
+<section class="space-y-3">
+<h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
+                Recent Alerts
+                <span class="size-2 bg-red-500 rounded-full animate-pulse"></span>
+</h3>
+<div class="bg-red-50 dark:bg-red-900/10 border-l-4 border-red-500 p-4 rounded-r-xl">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-red-500">warning</span>
+<div>
+<p class="text-sm font-bold text-red-900 dark:text-red-300">Irrigation Required</p>
+<p class="text-xs text-red-700 dark:text-red-400 mt-1">Field B moisture dropped below 30%</p>
+</div>
+</div>
+</div>
+<div class="bg-yellow-50 dark:bg-yellow-900/10 border-l-4 border-yellow-500 p-4 rounded-r-xl">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-yellow-600">info</span>
+<div>
+<p class="text-sm font-bold text-yellow-900 dark:text-yellow-300">Pest Alert Nearby</p>
+<p class="text-xs text-yellow-700 dark:text-yellow-400 mt-1">Locust swarms reported in neighboring sector</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border-t border-slate-100 dark:border-slate-800 px-6 py-3 pb-6 safe-area-bottom">
+<div class="flex items-center justify-between">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined filled-icon">home</span>
+<span class="text-[10px] font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">potted_plant</span>
+<span class="text-[10px] font-bold">Crop</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">flare</span>
+<span class="text-[10px] font-bold">Fertilizer</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">notifications_active</span>
+<span class="text-[10px] font-bold">Alerts</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-[10px] font-bold">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

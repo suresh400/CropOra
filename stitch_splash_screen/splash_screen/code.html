@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cropora - Splash Screen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2f7f33",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#141e15",
+                        "earth-brown": "#f4f1ea",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex items-center justify-center font-display">
+<!-- Main Splash Container -->
+<div class="relative flex h-full min-h-screen w-full flex-col bg-earth-brown dark:bg-background-dark group/design-root overflow-hidden items-center justify-between py-16">
+<!-- Top Spacer for Balance -->
+<div class="h-10"></div>
+<!-- Logo and Branding Section -->
+<div class="flex flex-col items-center px-4">
+<!-- Icon Container -->
+<div class="@[480px]:px-4 @[480px]:py-3 mb-6">
+<div class="w-32 h-32 bg-primary rounded-xl flex items-center justify-center shadow-xl shadow-primary/20">
+<span class="material-symbols-outlined text-white text-7xl" style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;">
+                        eco
+                    </span>
+</div>
+</div>
+<!-- App Name -->
+<h1 class="text-slate-900 dark:text-slate-100 tracking-tight text-[48px] font-bold leading-tight px-4 text-center pb-2">
+                Cropora
+            </h1>
+<!-- Tagline -->
+<p class="text-primary text-lg font-medium leading-normal pb-8 pt-1 px-4 text-center">
+                Smart Farming Starts Here
+            </p>
+</div>
+<!-- Loading Progress Section -->
+<div class="w-full max-w-xs px-6 flex flex-col gap-4">
+<div class="flex flex-col gap-3">
+<div class="flex gap-6 justify-center">
+<p class="text-slate-600 dark:text-slate-400 text-sm font-medium leading-normal">
+                        Initializing agricultural insights...
+                    </p>
+</div>
+<!-- Material 3 Linear Progress Indicator -->
+<div class="rounded-full bg-primary/20 h-1 overflow-hidden">
+<div class="h-full rounded-full bg-primary" style="width: 45%;"></div>
+</div>
+</div>
+</div>
+<!-- Footer / Version Info -->
+<div class="flex flex-col items-center gap-2">
+<p class="text-slate-400 dark:text-slate-600 text-xs font-normal">Version 2.0.4</p>
+<!-- Decorative background elements -->
+<div class="absolute -bottom-24 -left-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+</div>
+</div>
+</body></html>

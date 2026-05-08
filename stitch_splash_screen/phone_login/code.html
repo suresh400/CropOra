@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login to Cropora</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2f7f33",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex h-screen w-full flex-col overflow-x-hidden">
+<!-- Top Navigation -->
+<div class="flex items-center p-4 pb-2 justify-between">
+<button class="flex size-12 shrink-0 items-center justify-center text-slate-900 dark:text-slate-100 hover:bg-primary/10 rounded-full transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+</div>
+<!-- Header Section -->
+<div class="px-6 pt-8 pb-4">
+<h1 class="text-slate-900 dark:text-slate-100 tracking-tight text-[36px] font-bold leading-tight">
+                Welcome back to Cropora
+            </h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg font-normal leading-normal mt-2">
+                Enter your phone number to continue
+            </p>
+</div>
+<!-- Login Form -->
+<div class="flex flex-col gap-6 px-6 py-6 max-w-md w-full mx-auto">
+<div class="flex gap-4">
+<label class="flex flex-col w-28 shrink-0">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal pb-2 px-1">Country</p>
+<div class="relative">
+<input class="form-input flex w-full rounded-xl border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 focus:ring-primary focus:border-primary h-14 p-4 text-base font-medium" placeholder="+1" type="text" value="+1"/>
+<span class="material-symbols-outlined absolute right-3 top-4 text-slate-400 pointer-events-none">expand_more</span>
+</div>
+</label>
+<label class="flex flex-col flex-1">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal pb-2 px-1">Phone Number</p>
+<input class="form-input flex w-full rounded-xl border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 focus:ring-primary focus:border-primary h-14 p-4 text-base font-normal" placeholder="000 000 0000" type="tel"/>
+</label>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-5 bg-primary text-white text-lg font-bold shadow-lg shadow-primary/20 hover:brightness-110 active:scale-95 transition-all">
+<span class="truncate">Get OTP</span>
+</button>
+</div>
+<!-- Divider Section -->
+<div class="flex items-center px-6 py-8 max-w-md w-full mx-auto">
+<div class="flex-grow h-[1px] bg-slate-200 dark:bg-slate-800"></div>
+<span class="px-4 text-sm text-slate-500 dark:text-slate-400 font-medium">or login with</span>
+<div class="flex-grow h-[1px] bg-slate-200 dark:bg-slate-800"></div>
+</div>
+<!-- Social Login Options -->
+<div class="flex flex-col gap-4 px-6 pb-12 max-w-md w-full mx-auto mt-auto sm:mt-0">
+<button class="flex items-center justify-center gap-3 w-full h-14 rounded-full border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<img alt="" class="w-6 h-6" data-alt="Google colorful letter G logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEZJZyZH6Ijn38YBrU7E4mGe-4bFYd09O3SsQeVu4D1c5BrDBc2HcX3rkkCvnSX4dGUfBYQg3McYzNOdtJ1Mn25aY4rRF-kbMcyOIC5InuuNvVEb46su4Uz5mxu9wkcNV3i_HeconiCfQaDCJ8KaP1Y_SXkuvvzQJWK0lRdGc9uY0ffp0B7ik8H8-qdotnC7c-Wj2-2_YzfDvspl2wWfdbHCyPNFceWQGBGtl4LNPJeKeP00VrYKUc3-11jlO6vvceB1QGx4OtFazN"/>
+<span>Continue with Google</span>
+</button>
+<button class="flex items-center justify-center gap-3 w-full h-14 rounded-full border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-white">mail</span>
+<span>Continue with Email</span>
+</button>
+</div>
+<!-- Footer Terms -->
+<div class="px-6 py-6 text-center text-xs text-slate-400 dark:text-slate-500">
+            By continuing, you agree to Cropora's 
+            <a class="underline hover:text-primary" href="#">Terms of Service</a> and 
+            <a class="underline hover:text-primary" href="#">Privacy Policy</a>.
+        </div>
+</div>
+<!-- Decorative Elements -->
+<div class="fixed -bottom-24 -left-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="fixed -top-24 -right-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+</body></html>

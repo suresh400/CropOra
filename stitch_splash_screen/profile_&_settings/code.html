@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2f7f33",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+    <div
+        class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+        <!-- Header -->
+        <div
+            class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-primary/10">
+            <div class="text-primary flex size-12 shrink-0 items-center justify-start cursor-pointer">
+                <span class="material-symbols-outlined text-3xl">arrow_back</span>
+            </div>
+            <h2
+                class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight flex-1 text-center pr-12">
+                Profile</h2>
+        </div>
+        <!-- User Profile Card -->
+        <div class="flex p-4 @container">
+            <div
+                class="flex w-full flex-col gap-6 bg-white dark:bg-slate-900 p-6 rounded-xl border border-primary/10 shadow-sm">
+                <div class="flex gap-4 items-center">
+                    <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-24 w-24 border-2 border-primary/20"
+                        data-alt="Portrait of a middle-aged Indian farmer smiling"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBrCT1aE4XSQKsInLB_o7FHKNwywdbnF-JSXipqBzU-VpeG1RUKZahGCGWU_ugo1g_AS_vnmLdAe0YR71GI_5grTjiNlb-2o07VLqcrI7F2KIzmZO3UcssmSSZ0JHhb1WH5juKvXLgd4TR3RI7GehuXgXX4suvrW-_0geloNfd_Kr1OOfXWrig783f1kTR2HSeXMTX3bLNNopKfUl5ECdP69fJvbvLGVa0jAGRq0RaA3gRJgH_16Ivy8DuypQS138XMU-tbysIVXcyh");'>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <p class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight tracking-tight">
+                            Suresh</p>
+                        <div class="flex items-center gap-1 text-primary mt-1">
+                            <span class="material-symbols-outlined text-sm">call</span>
+                            <p class="text-sm font-medium">+91 98765 43210</p>
+                        </div>
+                        <div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 mt-0.5">
+                            <span class="material-symbols-outlined text-sm">location_on</span>
+                            <p class="text-sm">Anantapur, AP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Farm Details Section -->
+        <div class="px-4">
+            <h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight pb-3">Farm
+                Details</h3>
+            <div
+                class="flex items-stretch justify-between gap-4 rounded-xl bg-primary/5 dark:bg-primary/10 p-4 border border-primary/20">
+                <div class="flex flex-col justify-center gap-2 flex-[2_2_0px]">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">straighten</span>
+                        <p class="text-slate-900 dark:text-slate-100 text-base font-bold leading-tight">Farm Size: 5
+                            Hectares</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">eco</span>
+                        <p class="text-primary text-sm font-semibold leading-normal uppercase tracking-wider">Primary
+                            Crop: Rice</p>
+                    </div>
+                </div>
+                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1 border border-white/20"
+                    data-alt="Lush green rice paddy field landscape"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCU7j-0icreoqIUuwE2AIRTCXqMTlaEBJvzAaD0d0CyMUywEoJsvsiRhsNKN7nPXTQ2UdwbiyNrUqDfpyswD1ylUsq47TXUoEwW4JmRpeCddhRS6mPP_1rbpUBV9v0qr-CkHmWejw8yisxG9OhCkljiHqUsBiaVyra-OOz8IKwmkERBwYS0k87FB0gtbE7ucKgV2Dzsda3wP5xhz0o6seuucS8Odi20MprLFuBVyRaf7SpGeEZ2_bKoKyb_VjAGg3CNGwoDnwSNo8fa");'>
+                </div>
+            </div>
+        </div>
+        <!-- Settings List -->
+        <div class="px-4 mt-6 space-y-4">
+            <h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight">App Settings
+            </h3>
+            <div class="space-y-2">
+                <!-- Language -->
+                <div
+                    class="flex items-center justify-between p-4 bg-white dark:bg-slate-900 rounded-xl border border-primary/10 group cursor-pointer">
+                    <div class="flex items-center gap-3">
+                        <div class="p-2 bg-primary/10 rounded-lg text-primary">
+                            <span class="material-symbols-outlined">language</span>
+                        </div>
+                        <p class="font-medium">Language</p>
+                    </div>
+                    <div class="flex items-center gap-2 text-slate-500">
+                        <span class="text-sm font-medium">English</span>
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </div>
+                </div>
+                <!-- Theme Toggle -->
+                <div
+                    class="flex items-center justify-between p-4 bg-white dark:bg-slate-900 rounded-xl border border-primary/10">
+                    <div class="flex items-center gap-3">
+                        <div class="p-2 bg-primary/10 rounded-lg text-primary">
+                            <span class="material-symbols-outlined">dark_mode</span>
+                        </div>
+                        <p class="font-medium">Dark Mode</p>
+                    </div>
+                    <div class="relative inline-flex items-center cursor-pointer">
+                        <div class="w-11 h-6 bg-slate-200 dark:bg-primary rounded-full transition-colors duration-200">
+                        </div>
+                        <div
+                            class="absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition-transform duration-200 transform translate-x-5">
+                        </div>
+                    </div>
+                </div>
+                <!-- Notifications Toggle -->
+                <div
+                    class="flex items-center justify-between p-4 bg-white dark:bg-slate-900 rounded-xl border border-primary/10">
+                    <div class="flex items-center gap-3">
+                        <div class="p-2 bg-primary/10 rounded-lg text-primary">
+                            <span class="material-symbols-outlined">notifications_active</span>
+                        </div>
+                        <p class="font-medium">Push Alerts</p>
+                    </div>
+                    <div class="relative inline-flex items-center cursor-pointer">
+                        <div class="w-11 h-6 bg-primary rounded-full transition-colors duration-200"></div>
+                        <div
+                            class="absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition-transform duration-200 transform translate-x-5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Help & Support -->
+            <h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight pt-2">Help
+                &amp; Support</h3>
+            <div class="space-y-2">
+                <div
+                    class="flex items-center justify-between p-4 bg-white dark:bg-slate-900 rounded-xl border border-primary/10 cursor-pointer">
+                    <div class="flex items-center gap-3">
+                        <div class="p-2 bg-primary/10 rounded-lg text-primary">
+                            <span class="material-symbols-outlined">support_agent</span>
+                        </div>
+                        <p class="font-medium">Emergency Helpline</p>
+                    </div>
+                    <span class="material-symbols-outlined text-slate-400">arrow_outward</span>
+                </div>
+                <div
+                    class="flex items-center justify-between p-4 bg-white dark:bg-slate-900 rounded-xl border border-primary/10 cursor-pointer">
+                    <div class="flex items-center gap-3">
+                        <div class="p-2 bg-primary/10 rounded-lg text-primary">
+                            <span class="material-symbols-outlined">account_balance</span>
+                        </div>
+                        <p class="font-medium">Government Schemes</p>
+                    </div>
+                    <span class="material-symbols-outlined text-slate-400">arrow_outward</span>
+                </div>
+            </div>
+        </div>
+        <!-- Logout Section -->
+        <div class="p-8 flex flex-col items-center">
+            <button
+                class="flex items-center gap-2 text-red-500 hover:text-red-600 font-semibold py-3 px-8 rounded-full bg-red-50 dark:bg-red-950/20 transition-all border border-red-100 dark:border-red-900/50">
+                <span class="material-symbols-outlined">logout</span>
+                Logout
+            </button>
+            <p class="text-slate-400 dark:text-slate-600 text-xs mt-4">Cropora v2.4.0 • Made for Farmers</p>
+        </div>
+        <div class="h-20"></div> <!-- Spacer for Nav -->
+        <!-- BottomNavBar -->
+        <div
+            class="fixed bottom-0 left-0 right-0 z-50 flex gap-2 border-t border-primary/10 bg-background-light dark:bg-background-dark px-4 pb-6 pt-2">
+            <a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="#">
+                <span class="material-symbols-outlined">home</span>
+                <p class="text-[10px] font-medium leading-normal tracking-tight">Home</p>
+            </a>
+            <a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="#">
+                <span class="material-symbols-outlined">agriculture</span>
+                <p class="text-[10px] font-medium leading-normal tracking-tight">My Farm</p>
+            </a>
+            <a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="#">
+                <span class="material-symbols-outlined">storefront</span>
+                <p class="text-[10px] font-medium leading-normal tracking-tight">Market</p>
+            </a>
+            <a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">person</span>
+                <p class="text-[10px] font-bold leading-normal tracking-tight">Profile</p>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

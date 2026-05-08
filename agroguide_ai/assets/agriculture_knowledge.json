@@ -1,0 +1,72 @@
+{
+    "pest_rice_yellow": {
+        "title": "Nitrogen deficiency in Rice",
+        "cause": "Nitrogen deficiency or Tungro virus if spots are present.",
+        "solution": "For nitrogen deficiency, apply urea fertilizer 40kg per acre. Ensure proper water management."
+    },
+    "pest_tomato_blight": {
+        "title": "Tomato Early/Late Blight",
+        "cause": "Fungal disease (Alternaria solani or Phytophthora infestans).",
+        "solution": "Remove infected leaves. Apply copper-based fungicide spray every 7-10 days."
+    },
+    "crop_wheat": {
+        "title": "Wheat Farming",
+        "cause": "Best practices for wheat crop",
+        "solution": "Sow in winter (November). Needs loam soil. Requires 3-4 irrigations."
+    },
+    "crop_cotton": {
+        "title": "Cotton Farming",
+        "cause": "Best practices for cotton crop",
+        "solution": "Needs black soil. Maintain 6-8 pH. Beware of pink bollworm and whitefly."
+    },
+    "fertilizer_urea": {
+        "title": "Urea Application",
+        "cause": "Use of urea for crops",
+        "solution": "Apply urea in split doses. Avoid applying before heavy rain. Best applied directly to soil near plant bases."
+    },
+    "fertilizer_npk": {
+        "title": "NPK Fertilizer",
+        "cause": "Balanced nutrition",
+        "solution": "Apply NPK 19:19:19 during early growth stages. Switch to higher potassium formulas during fruiting/flowering."
+    },
+    "irrigation_drip": {
+        "title": "Drip Irrigation",
+        "cause": "Water management",
+        "solution": "Prefer drip irrigation to save 40-50% water. Run morning or late evening to minimize evaporation."
+    },
+    "weather_rain": {
+        "title": "Rain Forecast",
+        "cause": "What to do during heavy rain",
+        "solution": "Ensure proper drainage in fields. Do not apply fertilizer to avoid runoff. Postpone spraying chemicals."
+    },
+    "weather_drought": {
+        "title": "Drought Conditions",
+        "cause": "Hot and dry weather",
+        "solution": "Apply organic mulch to retain soil moisture. Irrigate only near the root zone."
+    },
+    "pest_aphids": {
+        "title": "Aphid Infestation",
+        "cause": "Small sap-sucking insects",
+        "solution": "Spray Neem oil (5ml/liter). For severe cases, use Imidacloprid."
+    },
+    "pest_general": {
+        "title": "General Pest Control",
+        "cause": "Pesticide application",
+        "solution": "Identify pest before spraying. Use Neem oil for organic farming. Use chemical pesticides as last resort."
+    },
+    "crop_sugarcane": {
+        "title": "Sugarcane Advice",
+        "cause": "Growing sugarcane",
+        "solution": "Needs high water. Soil should be well-drained. Watch out for red rot disease."
+    },
+    "soil_ph": {
+        "title": "Soil pH Adjustment",
+        "cause": "Acidic or alkaline soil",
+        "solution": "To increase pH (make less acidic), add agriculture lime. To lower pH (make more acidic), add agricultural sulfur or organic matter."
+    },
+    "fallback": {
+        "title": "Agricultural Expert (Offline)",
+        "cause": "Offline Mode / Query not perfectly matched.",
+        "solution": "I am operating in offline mode. My knowledge is currently limited. Try asking about: 'rice yellow leaves', 'tomato blight', 'wheat', 'cotton', 'urea', 'irrigation', 'rain', 'aphids', or 'soil ph'."
+    }
+}

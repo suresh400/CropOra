@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2f7f33",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Cropora - Recommendation Results</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full max-w-md mx-auto flex-col bg-background-light dark:bg-background-dark overflow-x-hidden border-x border-primary/10">
+<!-- Top Navigation -->
+<div class="flex items-center p-4 pb-2 justify-between sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-10">
+<div class="text-primary flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-primary/10 cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center">Recommendation Results</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="text-primary flex size-10 items-center justify-center rounded-full hover:bg-primary/10">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+<div class="p-4 space-y-6">
+<!-- Hero Card -->
+<div class="flex flex-col items-stretch justify-start rounded-xl shadow-lg bg-white dark:bg-slate-900 overflow-hidden border border-primary/10">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="Lush green paddy fields ready for harvest" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCdhEnofwikxxFtgex0herDnhEPCxpEQGpf-jVuob7GK2Eh_cuvS_1-n_cM1SB9p-zbhoYHqi01LVkOnIeNwG4_eV77P7BpXXFXPxWF3rqdijeBjMZb0hh-U4fhHVBdhkOll3BuLCGagoxim_SXwqDLWj2KQJ_S7eaGtjwUj0cfpSJ2ENOIPE7QFjGrsysto6g9CNsRl6ZprBGfdaDdjhKB9p4MaFpiSOWOYXiDpOr6M8mUNBfcnvG1jaGWSgLbPRy_uPcR46gY2CJt");'>
+</div>
+<div class="flex w-full flex-col items-stretch justify-center gap-4 p-6">
+<div class="flex justify-between items-start">
+<div>
+<h1 class="text-slate-900 dark:text-white text-3xl font-bold leading-tight">Rice</h1>
+<p class="text-primary font-bold text-lg flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">verified</span>
+                                94% Confidence Match
+                            </p>
+</div>
+<div class="flex flex-col items-end">
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold border border-primary/20 uppercase tracking-wider">
+                                High Demand
+                            </span>
+</div>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">
+                        Rice is a staple cereal grain, primarily grown in submerged land. It is highly suitable for your soil composition and local climate, promising optimal growth.
+                    </p>
+<div class="grid grid-cols-2 gap-3 pt-2">
+<button class="flex items-center justify-center gap-2 rounded-full h-11 bg-primary text-white font-bold transition hover:bg-primary/90">
+<span class="material-symbols-outlined text-sm">download</span>
+                            Download PDF
+                        </button>
+<button class="flex items-center justify-center gap-2 rounded-full h-11 bg-primary/10 text-primary font-bold transition hover:bg-primary/20 border border-primary/20">
+<span class="material-symbols-outlined text-sm">share</span>
+                            Share
+                        </button>
+</div>
+</div>
+</div>
+<!-- Details Section -->
+<div class="bg-white dark:bg-slate-900 rounded-xl p-6 border border-primary/10">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">analytics</span>
+                    Crop Details
+                </h3>
+<div class="space-y-4">
+<div class="flex justify-between items-center py-2 border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400 text-sm">calendar_today</span>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Suitable Season</p>
+</div>
+<p class="text-slate-900 dark:text-white text-sm font-semibold">Kharif (Monsoon)</p>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400 text-sm">trending_up</span>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Estimated Yield</p>
+</div>
+<p class="text-slate-900 dark:text-white text-sm font-semibold">4.5 - 5.5 T/Hectare</p>
+</div>
+<div class="flex justify-between items-center py-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400 text-sm">agriculture</span>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Sowing Period</p>
+</div>
+<p class="text-slate-900 dark:text-white text-sm font-semibold">June - July</p>
+</div>
+</div>
+</div>
+<!-- Secondary Suggestions -->
+<div class="space-y-3">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold">Other Alternatives</h3>
+<div class="flex gap-4 overflow-x-auto pb-4 no-scrollbar">
+<div class="flex-shrink-0 w-48 bg-white dark:bg-slate-900 rounded-xl p-3 border border-primary/5">
+<div class="h-24 w-full rounded-lg mb-2 bg-slate-200" data-alt="Close up of wheat grain">
+<img class="w-full h-full object-cover rounded-lg" data-alt="Close up of wheat fields" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWfz7-XCF-dfCAUU9bQRYFYGdIRO2VQRICcnRuc66YKPsrLlpbgj9INQkKd2AeD149fqjCLNkqJkqt_W-rS3q22wjAt-8YmDogpfiru9QxVb2Mn1__MwHd_vW6tFg1mh5pImWQTHa8BGCCkUPSqyxv0h8VliHzQt7Twxvd6xXJg80XyyFXuloN-omvaH_4UbwamDSdaMZf5_AapuTEQ9oNoGob3VsnEPFjjw1FhbCTmOy1Z8InTVjTGF48uVNLLyu5buRy5QMlisfS"/>
+</div>
+<p class="font-bold text-sm">Wheat</p>
+<p class="text-primary text-xs">82% Match</p>
+</div>
+<div class="flex-shrink-0 w-48 bg-white dark:bg-slate-900 rounded-xl p-3 border border-primary/5">
+<div class="h-24 w-full rounded-lg mb-2 bg-slate-200">
+<img class="w-full h-full object-cover rounded-lg" data-alt="Ear of corn in the sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlM73PMgoCwrt3l7uDHC0-WuDhZjHa9MJ7vbyLPHOQr4yHpYEsJqz5HL6nCyIIAs5j94pOfyCPIxd82bihMUWUrhrx1JveHES0ur7DlfAybnyv6HI9TKOZVKvTMOnkA5m8ctS3fb0_XUalGrmuLwvT8rfT_kX-cx9fMAg8_AewCLMIzTq9V4AqR9Wk1jnwRifqMp0a-0_b_K4RtV2zLhKB4pPveyHniZIIlldcotg9uAhqRMah2g5ml8DL3U-zWQJ_qPk6GY0yCaCZ"/>
+</div>
+<p class="font-bold text-sm">Maize</p>
+<p class="text-primary text-xs">78% Match</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Spacer -->
+<div class="h-20"></div>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md bg-white dark:bg-slate-950 border-t border-primary/10 px-4 pb-6 pt-2 flex justify-between items-center z-50">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-1">home</span>
+<p class="text-[10px] font-medium leading-none">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">history</span>
+<p class="text-[10px] font-medium leading-none">History</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<p class="text-[10px] font-medium leading-none">Market</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-medium leading-none">Profile</p>
+</a>
+</div>
+</div>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .fill-1 {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</body></html>

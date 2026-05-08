@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "291242692614",
+    "project_id": "cropora-508e6",
+    "storage_bucket": "cropora-508e6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:291242692614:android:993eb210f36b091cc33387",
+        "android_client_info": {
+          "package_name": "com.example.birdle"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5slLCP9zSrONy14TRrbmNs2U53SMYeqA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:291242692614:android:7faf5e7dde39469cc33387",
+        "android_client_info": {
+          "package_name": "com.suresh.cropora"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5slLCP9zSrONy14TRrbmNs2U53SMYeqA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

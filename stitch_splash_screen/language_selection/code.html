@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2f7f33",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>Cropora - Language Selection</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto bg-white dark:bg-slate-900 shadow-xl">
+<!-- Header Section -->
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="text-primary flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-3xl">arrow_back</span>
+</div>
+<div class="flex-1">
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight text-center pr-12">Cropora</h2>
+</div>
+</div>
+<div class="px-6 pt-8 pb-4">
+<h1 class="text-slate-900 dark:text-slate-100 tracking-tight text-3xl font-bold leading-tight">Select Your Language</h1>
+<p class="text-slate-500 dark:text-slate-400 mt-2 text-base">Choose your preferred language to start using Cropora for your farming needs.</p>
+</div>
+<!-- Language Grid -->
+<div class="grid grid-cols-2 gap-4 p-6">
+<!-- English -->
+<button class="flex flex-col items-center gap-4 p-6 text-center rounded-xl border-2 border-primary bg-primary/5 dark:bg-primary/10 transition-all">
+<div class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">language</span>
+</div>
+<div>
+<p class="text-slate-900 dark:text-slate-100 text-lg font-bold">English</p>
+<p class="text-primary text-sm font-medium">English</p>
+</div>
+</button>
+<!-- Hindi -->
+<button class="flex flex-col items-center gap-4 p-6 text-center rounded-xl border-2 border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 hover:border-primary/50 transition-all">
+<div class="w-16 h-16 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400 text-3xl">translate</span>
+</div>
+<div>
+<p class="text-slate-900 dark:text-slate-100 text-lg font-bold">हिन्दी</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Hindi</p>
+</div>
+</button>
+<!-- Telugu -->
+<button class="flex flex-col items-center gap-4 p-6 text-center rounded-xl border-2 border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 hover:border-primary/50 transition-all">
+<div class="w-16 h-16 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400 text-3xl">translate</span>
+</div>
+<div>
+<p class="text-slate-900 dark:text-slate-100 text-lg font-bold">తెలుగు</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Telugu</p>
+</div>
+</button>
+<!-- Tamil -->
+<button class="flex flex-col items-center gap-4 p-6 text-center rounded-xl border-2 border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 hover:border-primary/50 transition-all">
+<div class="w-16 h-16 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400 text-3xl">translate</span>
+</div>
+<div>
+<p class="text-slate-900 dark:text-slate-100 text-lg font-bold">தமிழ்</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Tamil</p>
+</div>
+</button>
+<!-- Malayalam -->
+<button class="flex flex-col items-center gap-4 p-6 text-center rounded-xl border-2 border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 hover:border-primary/50 transition-all">
+<div class="w-16 h-16 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400 text-3xl">translate</span>
+</div>
+<div>
+<p class="text-slate-900 dark:text-slate-100 text-lg font-bold">മലയാളം</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Malayalam</p>
+</div>
+</button>
+<!-- Kannada -->
+<button class="flex flex-col items-center gap-4 p-6 text-center rounded-xl border-2 border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 hover:border-primary/50 transition-all">
+<div class="w-16 h-16 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400 text-3xl">translate</span>
+</div>
+<div>
+<p class="text-slate-900 dark:text-slate-100 text-lg font-bold">ಕನ್ನಡ</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Kannada</p>
+</div>
+</button>
+</div>
+<!-- Sticky Footer -->
+<div class="mt-auto p-6 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
+<button class="w-full flex cursor-pointer items-center justify-center rounded-full h-14 px-5 bg-primary text-white text-lg font-bold transition-transform active:scale-95 shadow-lg shadow-primary/20">
+<span>Continue</span>
+<span class="material-symbols-outlined ml-2">arrow_forward</span>
+</button>
+<p class="text-center text-slate-400 dark:text-slate-500 text-xs mt-4">You can change this later in settings</p>
+</div>
+</div>
+<!-- Decorative Elements -->
+<div class="fixed top-0 left-0 -z-10 opacity-10 pointer-events-none">
+<div class="w-64 h-64 bg-primary rounded-full blur-3xl -ml-32 -mt-32"></div>
+</div>
+<div class="fixed bottom-0 right-0 -z-10 opacity-10 pointer-events-none">
+<div class="w-96 h-96 bg-primary rounded-full blur-3xl -mr-48 -mb-48"></div>
+</div>
+</body></html>

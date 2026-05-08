@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cropora - Crop Recommendation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2f7f33",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .form-input:focus {
+            border-color: #2f7f33;
+            box-shadow: 0 0 0 2px rgba(47, 127, 51, 0.2);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen font-display">
+<div class="max-w-md mx-auto bg-background-light dark:bg-background-dark min-h-screen flex flex-col shadow-xl">
+<!-- Header -->
+<header class="flex items-center p-4 gap-4 sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-10">
+<button class="p-2 hover:bg-primary/10 rounded-full transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-100">arrow_back</span>
+</button>
+<div>
+<h1 class="text-xl font-bold tracking-tight">Cropora AI</h1>
+<p class="text-xs text-primary font-semibold uppercase tracking-wider">Crop Recommendation</p>
+</div>
+</header>
+<!-- Progress Stepper -->
+<div class="px-6 py-4">
+<div class="flex justify-between items-end mb-2">
+<span class="text-sm font-bold text-primary">Soil &amp; Environment Analysis</span>
+<span class="text-xs font-medium opacity-60">Step 1 of 2</span>
+</div>
+<div class="h-2 w-full bg-primary/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-1/2 rounded-full"></div>
+</div>
+</div>
+<!-- Main Form -->
+<main class="flex-1 px-6 py-4 space-y-8 pb-32">
+<section>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary">science</span>
+<h2 class="text-lg font-bold">Soil Nutrients</h2>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<!-- Nitrogen Input -->
+<div class="relative">
+<label class="block text-sm font-semibold mb-2 ml-1 text-slate-700 dark:text-slate-300">Nitrogen (N)</label>
+<div class="relative group">
+<input class="w-full h-16 px-5 text-xl font-bold rounded-2xl border-2 border-primary/20 bg-white dark:bg-slate-800 focus:border-primary focus:ring-0 transition-all placeholder:text-slate-300 dark:placeholder:text-slate-600" placeholder="e.g. 45" type="number"/>
+<span class="absolute right-5 top-1/2 -translate-y-1/2 text-primary/40 font-bold">mg/kg</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Phosphorus -->
+<div class="relative">
+<label class="block text-sm font-semibold mb-2 ml-1 text-slate-700 dark:text-slate-300">Phosphorus (P)</label>
+<input class="w-full h-16 px-5 text-xl font-bold rounded-2xl border-2 border-primary/20 bg-white dark:bg-slate-800 focus:border-primary focus:ring-0 transition-all" placeholder="50" type="number"/>
+</div>
+<!-- Potassium -->
+<div class="relative">
+<label class="block text-sm font-semibold mb-2 ml-1 text-slate-700 dark:text-slate-300">Potassium (K)</label>
+<input class="w-full h-16 px-5 text-xl font-bold rounded-2xl border-2 border-primary/20 bg-white dark:bg-slate-800 focus:border-primary focus:ring-0 transition-all" placeholder="40" type="number"/>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary">thermostat</span>
+<h2 class="text-lg font-bold">Environmental Factors</h2>
+</div>
+<div class="space-y-4">
+<!-- Soil Type Dropdown -->
+<div>
+<label class="block text-sm font-semibold mb-2 ml-1 text-slate-700 dark:text-slate-300">Soil Type</label>
+<select class="w-full h-16 px-5 text-lg font-medium rounded-2xl border-2 border-primary/20 bg-white dark:bg-slate-800 focus:border-primary focus:ring-0 appearance-none transition-all">
+<option value="">Select Soil Type</option>
+<option value="alluvial">Alluvial Soil</option>
+<option value="black">Black Soil</option>
+<option value="red">Red Soil</option>
+<option value="laterite">Laterite Soil</option>
+<option value="sandy">Sandy Soil</option>
+</select>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Temperature -->
+<div>
+<label class="block text-sm font-semibold mb-2 ml-1 text-slate-700 dark:text-slate-300">Temp (°C)</label>
+<input class="w-full h-16 px-5 text-xl font-bold rounded-2xl border-2 border-primary/20 bg-white dark:bg-slate-800 focus:border-primary focus:ring-0 transition-all" placeholder="25.5" step="0.1" type="number"/>
+</div>
+<!-- Humidity -->
+<div>
+<label class="block text-sm font-semibold mb-2 ml-1 text-slate-700 dark:text-slate-300">Humidity (%)</label>
+<input class="w-full h-16 px-5 text-xl font-bold rounded-2xl border-2 border-primary/20 bg-white dark:bg-slate-800 focus:border-primary focus:ring-0 transition-all" placeholder="80" step="0.1" type="number"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Moisture -->
+<div>
+<label class="block text-sm font-semibold mb-2 ml-1 text-slate-700 dark:text-slate-300">Moisture (%)</label>
+<input class="w-full h-16 px-5 text-xl font-bold rounded-2xl border-2 border-primary/20 bg-white dark:bg-slate-800 focus:border-primary focus:ring-0 transition-all" placeholder="40" type="number"/>
+</div>
+<!-- pH Value -->
+<div>
+<label class="block text-sm font-semibold mb-2 ml-1 text-slate-700 dark:text-slate-300">pH Value</label>
+<input class="w-full h-16 px-5 text-xl font-bold rounded-2xl border-2 border-primary/20 bg-white dark:bg-slate-800 focus:border-primary focus:ring-0 transition-all" placeholder="6.5" step="0.1" type="number"/>
+</div>
+</div>
+<!-- Rainfall -->
+<div>
+<label class="block text-sm font-semibold mb-2 ml-1 text-slate-700 dark:text-slate-300">Annual Rainfall (mm)</label>
+<input class="w-full h-16 px-5 text-xl font-bold rounded-2xl border-2 border-primary/20 bg-white dark:bg-slate-800 focus:border-primary focus:ring-0 transition-all" placeholder="e.g. 200" type="number"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Fixed Bottom Action & Navbar Area -->
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md bg-background-light dark:bg-background-dark border-t border-primary/10 px-4 pt-4 pb-2 z-20">
+<button class="w-full bg-primary text-white py-4 rounded-2xl font-bold text-lg flex items-center justify-center gap-2 hover:bg-primary/90 active:scale-[0.98] transition-all shadow-lg shadow-primary/20 mb-4">
+                Get Recommendation
+                <span class="material-symbols-outlined">trending_up</span>
+</button>
+<!-- Bottom Navigation -->
+<nav class="flex justify-around items-center">
+<a class="flex flex-col items-center p-2 text-primary" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center p-2 text-slate-400" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-[10px] font-bold mt-1">Analysis</span>
+</a>
+<a class="flex flex-col items-center p-2 text-slate-400" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="text-[10px] font-bold mt-1">History</span>
+</a>
+<a class="flex flex-col items-center p-2 text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold mt-1">Profile</span>
+</a>
+</nav>
+</div>
+</div>
+</body></html>

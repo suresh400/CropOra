@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2f7f33",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Cropora - Weather Trends</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen pb-24">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 px-4 py-4">
+<div class="max-w-md mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<div>
+<h2 class="text-lg font-bold leading-tight">Anantapur, AP</h2>
+<p class="text-xs text-primary/70 font-medium">Updated 5 mins ago</p>
+</div>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-2xl">refresh</span>
+</button>
+</div>
+</header>
+<main class="max-w-md mx-auto px-4 pt-6 space-y-6">
+<!-- Extreme Weather Alert -->
+<div class="bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-2xl p-4 flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">warning</span>
+</div>
+<div>
+<h3 class="font-bold text-orange-900 dark:text-orange-100">Heatwave Alert</h3>
+<p class="text-sm text-orange-800 dark:text-orange-200">Temp reaching 42°C. Ensure adequate irrigation for crops before 10 AM.</p>
+</div>
+</div>
+<!-- Current Weather Summary -->
+<section class="text-center py-4 bg-white dark:bg-primary/5 rounded-3xl border border-primary/5 shadow-sm">
+<div class="flex justify-center mb-2">
+<span class="material-symbols-outlined text-7xl text-primary drop-shadow-sm">partly_cloudy_day</span>
+</div>
+<h1 class="text-6xl font-bold tracking-tighter">32°C</h1>
+<p class="text-lg font-medium text-slate-600 dark:text-slate-400 mt-1">Partly Cloudy</p>
+<div class="flex justify-center gap-4 mt-2 text-sm font-medium text-primary/80">
+<span>Feels like 35°C</span>
+<span>•</span>
+<span>Humidity 45%</span>
+</div>
+</section>
+<!-- Farming Tips -->
+<section class="grid grid-cols-1 gap-3">
+<h3 class="text-sm font-bold uppercase tracking-wider text-primary px-1">Farming Insights</h3>
+<div class="bg-primary text-white p-4 rounded-2xl flex items-center gap-4">
+<span class="material-symbols-outlined text-3xl">water_drop</span>
+<div class="flex-1">
+<p class="font-bold">Ideal Time for Irrigation</p>
+<p class="text-xs opacity-90">Soil moisture low. Water crops in the next 3 hours.</p>
+</div>
+</div>
+<div class="bg-primary/10 border border-primary/20 p-4 rounded-2xl flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">agriculture</span>
+<div class="flex-1 text-slate-800 dark:text-slate-200">
+<p class="font-bold">Postpone Fertilizer</p>
+<p class="text-xs opacity-80">Light rain expected tomorrow may wash away nutrients.</p>
+</div>
+</div>
+</section>
+<!-- Trend Graphs Placeholder (Visual Representation) -->
+<section class="space-y-4">
+<h3 class="text-sm font-bold uppercase tracking-wider text-primary px-1">24H Trend</h3>
+<div class="bg-white dark:bg-primary/5 border border-primary/10 rounded-3xl p-5">
+<div class="flex items-center justify-between mb-6">
+<span class="font-bold">Temperature (°C)</span>
+<div class="flex gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="text-[10px] font-bold opacity-60">AVG 30°C</span>
+</div>
+</div>
+<!-- Simulated Graph -->
+<div class="h-32 flex items-end justify-between gap-2 px-2">
+<div class="w-full bg-primary/20 rounded-t-lg h-2/3 relative group">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold opacity-0 group-hover:opacity-100 transition-opacity">28°</div>
+</div>
+<div class="w-full bg-primary/40 rounded-t-lg h-3/4"></div>
+<div class="w-full bg-primary/60 rounded-t-lg h-5/6"></div>
+<div class="w-full bg-primary rounded-t-lg h-full"></div>
+<div class="w-full bg-primary/80 rounded-t-lg h-4/5"></div>
+<div class="w-full bg-primary/40 rounded-t-lg h-2/3"></div>
+<div class="w-full bg-primary/20 rounded-t-lg h-1/2"></div>
+</div>
+<div class="flex justify-between mt-2 text-[10px] font-bold text-slate-400 px-1 uppercase">
+<span>Morning</span>
+<span>Noon</span>
+<span>Evening</span>
+<span>Night</span>
+</div>
+</div>
+</section>
+<!-- 7-Day Forecast -->
+<section class="space-y-3">
+<div class="flex items-center justify-between px-1">
+<h3 class="text-sm font-bold uppercase tracking-wider text-primary">7-Day Forecast</h3>
+<span class="text-xs font-bold text-primary/60">Anantapur</span>
+</div>
+<div class="space-y-2">
+<!-- Day Card -->
+<div class="bg-white dark:bg-primary/5 p-4 rounded-2xl flex items-center justify-between border border-primary/5">
+<div class="w-12 font-bold">Today</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">sunny</span>
+<span class="text-xs font-bold text-slate-400">0% Rain</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-bold">34°</span>
+<span class="font-bold opacity-40">24°</span>
+</div>
+</div>
+<div class="bg-white dark:bg-primary/5 p-4 rounded-2xl flex items-center justify-between border border-primary/5">
+<div class="w-12 font-bold">Mon</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">cloudy_filled</span>
+<span class="text-xs font-bold text-slate-400">15% Rain</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-bold">32°</span>
+<span class="font-bold opacity-40">22°</span>
+</div>
+</div>
+<div class="bg-white dark:bg-primary/5 p-4 rounded-2xl flex items-center justify-between border border-primary/5">
+<div class="w-12 font-bold">Tue</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-500">rainy</span>
+<span class="text-xs font-bold text-blue-500">85% Rain</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-bold">28°</span>
+<span class="font-bold opacity-40">21°</span>
+</div>
+</div>
+<div class="bg-white dark:bg-primary/5 p-4 rounded-2xl flex items-center justify-between border border-primary/5">
+<div class="w-12 font-bold">Wed</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">partly_cloudy_day</span>
+<span class="text-xs font-bold text-slate-400">10% Rain</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-bold">31°</span>
+<span class="font-bold opacity-40">23°</span>
+</div>
+</div>
+<div class="bg-white dark:bg-primary/5 p-4 rounded-2xl flex items-center justify-between border border-primary/5">
+<div class="w-12 font-bold">Thu</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">sunny</span>
+<span class="text-xs font-bold text-slate-400">5% Rain</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-bold">35°</span>
+<span class="font-bold opacity-40">25°</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-background-dark/90 backdrop-blur-lg border-t border-primary/10 px-6 py-3 z-50">
+<div class="max-w-md mx-auto flex justify-between items-center">
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] font-bold">DASHBOARD</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-1">cloud</span>
+<span class="text-[10px] font-bold">WEATHER</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">eco</span>
+<span class="text-[10px] font-bold">CROPS</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<span class="text-[10px] font-bold">MARKET</span>
+</a>
+</div>
+</nav>
+</body></html>

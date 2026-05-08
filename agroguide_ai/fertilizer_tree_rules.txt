@@ -1,0 +1,79 @@
+|--- Nitrogen_Level <= 59.50
+|   |--- class: Urea
+|--- Nitrogen_Level >  59.50
+|   |--- Phosphorus_Level <= 39.50
+|   |   |--- class: DAP
+|   |--- Phosphorus_Level >  39.50
+|   |   |--- Potassium_Level <= 39.50
+|   |   |   |--- class: MOP
+|   |   |--- Potassium_Level >  39.50
+|   |   |   |--- Soil_pH <= 5.49
+|   |   |   |   |--- class: Compost
+|   |   |   |--- Soil_pH >  5.49
+|   |   |   |   |--- Soil_pH <= 7.81
+|   |   |   |   |   |--- Soil_pH <= 5.52
+|   |   |   |   |   |   |--- Nitrogen_Level <= 139.50
+|   |   |   |   |   |   |   |--- Phosphorus_Level <= 71.50
+|   |   |   |   |   |   |   |   |--- Humidity <= 59.19
+|   |   |   |   |   |   |   |   |   |--- class: Compost
+|   |   |   |   |   |   |   |   |--- Humidity >  59.19
+|   |   |   |   |   |   |   |   |   |--- Rainfall <= 788.23
+|   |   |   |   |   |   |   |   |   |   |--- class: SSP
+|   |   |   |   |   |   |   |   |   |--- Rainfall >  788.23
+|   |   |   |   |   |   |   |   |   |   |--- class: DAP
+|   |   |   |   |   |   |   |--- Phosphorus_Level >  71.50
+|   |   |   |   |   |   |   |   |--- Phosphorus_Level <= 88.00
+|   |   |   |   |   |   |   |   |   |--- class: MOP
+|   |   |   |   |   |   |   |   |--- Phosphorus_Level >  88.00
+|   |   |   |   |   |   |   |   |   |--- class: Urea
+|   |   |   |   |   |   |--- Nitrogen_Level >  139.50
+|   |   |   |   |   |   |   |--- class: Compost
+|   |   |   |   |   |--- Soil_pH >  5.52
+|   |   |   |   |   |   |--- Rainfall <= 341.62
+|   |   |   |   |   |   |   |--- Soil_Moisture <= 43.97
+|   |   |   |   |   |   |   |   |--- Rainfall <= 314.01
+|   |   |   |   |   |   |   |   |   |--- Soil_pH <= 5.78
+|   |   |   |   |   |   |   |   |   |   |--- class: Urea
+|   |   |   |   |   |   |   |   |   |--- Soil_pH >  5.78
+|   |   |   |   |   |   |   |   |   |   |--- class: DAP
+|   |   |   |   |   |   |   |   |--- Rainfall >  314.01
+|   |   |   |   |   |   |   |   |   |--- Soil_Moisture <= 24.59
+|   |   |   |   |   |   |   |   |   |   |--- class: MOP
+|   |   |   |   |   |   |   |   |   |--- Soil_Moisture >  24.59
+|   |   |   |   |   |   |   |   |   |   |--- class: Compost
+|   |   |   |   |   |   |   |--- Soil_Moisture >  43.97
+|   |   |   |   |   |   |   |   |--- Soil_Type_Clay <= 0.50
+|   |   |   |   |   |   |   |   |   |--- Phosphorus_Level <= 50.00
+|   |   |   |   |   |   |   |   |   |   |--- class: MOP
+|   |   |   |   |   |   |   |   |   |--- Phosphorus_Level >  50.00
+|   |   |   |   |   |   |   |   |   |   |--- class: NPK
+|   |   |   |   |   |   |   |   |--- Soil_Type_Clay >  0.50
+|   |   |   |   |   |   |   |   |   |--- Soil_pH <= 5.89
+|   |   |   |   |   |   |   |   |   |   |--- class: Compost
+|   |   |   |   |   |   |   |   |   |--- Soil_pH >  5.89
+|   |   |   |   |   |   |   |   |   |   |--- class: DAP
+|   |   |   |   |   |   |--- Rainfall >  341.62
+|   |   |   |   |   |   |   |--- Soil_Type_Clay <= 0.50
+|   |   |   |   |   |   |   |   |--- Temperature <= 38.72
+|   |   |   |   |   |   |   |   |   |--- Soil_Moisture <= 59.67
+|   |   |   |   |   |   |   |   |   |   |--- class: NPK
+|   |   |   |   |   |   |   |   |   |--- Soil_Moisture >  59.67
+|   |   |   |   |   |   |   |   |   |   |--- class: MOP
+|   |   |   |   |   |   |   |   |--- Temperature >  38.72
+|   |   |   |   |   |   |   |   |   |--- Soil_Moisture <= 22.01
+|   |   |   |   |   |   |   |   |   |   |--- class: Urea
+|   |   |   |   |   |   |   |   |   |--- Soil_Moisture >  22.01
+|   |   |   |   |   |   |   |   |   |   |--- class: SSP
+|   |   |   |   |   |   |   |--- Soil_Type_Clay >  0.50
+|   |   |   |   |   |   |   |   |--- Soil_Moisture <= 17.45
+|   |   |   |   |   |   |   |   |   |--- Phosphorus_Level <= 62.50
+|   |   |   |   |   |   |   |   |   |   |--- class: MOP
+|   |   |   |   |   |   |   |   |   |--- Phosphorus_Level >  62.50
+|   |   |   |   |   |   |   |   |   |   |--- class: NPK
+|   |   |   |   |   |   |   |   |--- Soil_Moisture >  17.45
+|   |   |   |   |   |   |   |   |   |--- Crop_Type_Tomato <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: NPK
+|   |   |   |   |   |   |   |   |   |--- Crop_Type_Tomato >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: NPK
+|   |   |   |   |--- Soil_pH >  7.81
+|   |   |   |   |   |--- class: Zinc Sulphate
