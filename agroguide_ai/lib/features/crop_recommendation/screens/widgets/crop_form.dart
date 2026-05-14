@@ -352,7 +352,7 @@ class _CropRecommendationFormState extends State<CropRecommendationForm> {
             Text(reason, style: TextStyle(color: isDark ? Colors.grey.shade300 : AppColors.textSecondary, fontSize: 13)),
             const SizedBox(height: 12),
 
-            // Fertilizer result block
+          
             if (fertResult != null) ...[
               Container(
                 padding: const EdgeInsets.all(12),
@@ -384,7 +384,7 @@ class _CropRecommendationFormState extends State<CropRecommendationForm> {
                     Text(fertResult['reason'] ?? '', style: const TextStyle(fontSize: 12)),
                     const SizedBox(height: 12),
 
-                    // Reminder scheduling row (only shown after fertilizer is fetched)
+              
                     if (!reminderDone)
                       SizedBox(
                         width: double.infinity,
@@ -416,7 +416,7 @@ class _CropRecommendationFormState extends State<CropRecommendationForm> {
                         ),
                       )
                     else
-                      // Reminder confirmation badge
+                    
                       Container(
                         padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
