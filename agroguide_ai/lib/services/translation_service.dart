@@ -20,7 +20,7 @@ class TranslationService {
       'reminders': 'Reminders', 'notifications': 'Notifications', 'dose_1': 'Basal Dose', 'dose_2': 'Vegetative Dose', 'dose_3': 'Flowering Dose',
        'completed': 'Completed', 'in': 'In', 'days': 'Days', 'today': 'Today',
       'mark_all_read': 'Mark All as Read', 'all': 'All', 'unread': 'Unread', 'alerts': 'Alerts',
-    },
+     'settings': 'Settings', 'offline_mode': 'Offline Mode', 'offline_mode_desc': 'When enabled, the app uses a local AI model without internet.', 'contact_us': 'Contact Us', 'phone': 'Phone', 'email': 'Email', 'app_version': 'Version 1.0.0 • Smart Farming AI', 'copied_phone': 'Phone number copied!', 'copied_email': 'Email copied!' },
     'hi': {
       'app_title': 'क्रोपरा एआई', 'dashboard': 'डैशबोर्ड', 'advisories': 'सलाह', 'ai_chat': 'एआई चैट', 'profile': 'प्रोफाइल',
       'farm_health': 'खेत का स्वास्थ्य', 'optimal_status': 'इष्टतम स्थिति', 'temp': 'तापमान', 'humidity': 'नमी', 'soil': 'मिट्टी',
@@ -39,7 +39,7 @@ class TranslationService {
       'notifications': 'सूचनाएं', 'dose_1': 'बेसल खुराक', 'dose_2': 'वानस्पतिक खुराक', 'dose_3': 'फूल आने की खुराक',
        'completed': 'पूरा हुआ', 'in': 'में', 'days': 'दिनों', 'today': 'आज',
       'mark_all_read': 'सभी को पढ़ा हुआ मानें', 'all': 'सभी', 'unread': 'बिना पढ़े', 'alerts': 'अलर्ट',
-    },
+     'settings': 'सेटिंग्स', 'offline_mode': 'ऑफ़लाइन मोड', 'offline_mode_desc': 'सक्षम होने पर, ऐप इंटरनेट के बिना स्थानीय एआई मॉडल का उपयोग करता है।', 'contact_us': 'संपर्क करें', 'phone': 'फ़ोन', 'email': 'ईमेल', 'app_version': 'संस्करण 1.0.0 • स्मार्ट खेती एआई', 'copied_phone': 'फ़ोन नंबर कॉपी किया गया!', 'copied_email': 'ईमेल कॉपी किया गया!' },
     'te': {
       'app_title': 'క్రోపొరా AI', 'dashboard': 'డాష్‌బోర్డ్', 'advisories': 'సలహాలు', 'ai_chat': 'AI చాట్', 'profile': 'ప్రొఫైల్',
       'farm_health': 'పొలం ఆరోగ్యం', 'optimal_status': 'సరైన పరిస్థితి', 'temp': 'ఉష్ణోగ్రత', 'humidity': 'తేమ', 'soil': 'మట్టి',
@@ -52,7 +52,7 @@ class TranslationService {
       'history_tabs_advisories': 'సలహాలు', 'history_tabs_chat': 'చాట్ చరిత్ర', 'no_history': 'చరిత్ర కనుగొనబడలేదు.',
       'ai_expert_greeting': 'నమస్కారం! నేను క్రోపొరా AI నిపుణుడిని. ఈరోజు మీ పొలం విషయంలో నేను మీకు ఎలా సహాయపడగలను?', 'ask_anything': 'ఏదైనా అడగండి...',
       'confidence': 'నమ్మకం', 'reason': 'కారణం',
-    },
+     'settings': 'Settings', 'offline_mode': 'Offline Mode', 'offline_mode_desc': 'When enabled, the app uses a local AI model without internet.', 'contact_us': 'Contact Us', 'phone': 'Phone', 'email': 'Email', 'app_version': 'Version 1.0.0 • Smart Farming AI', 'copied_phone': 'Phone number copied!', 'copied_email': 'Email copied!' },
     'ta': {
       'app_title': 'க்ரோபோரா AI', 'dashboard': 'டாஷ்போர்டு', 'advisories': 'ஆலோசனைகள்', 'ai_chat': 'AI அரட்டை', 'profile': 'சுயவிவரம்',
       'farm_health': 'பண்ணை ஆரோக்கியம்', 'optimal_status': 'உகந்த நிலை', 'temp': 'வெப்பநிலை', 'humidity': 'ஈரப்பதம்', 'soil': 'மண்',
@@ -65,7 +65,7 @@ class TranslationService {
       'history_tabs_advisories': 'ஆலோசனைகள்', 'history_tabs_chat': 'அரட்டை வரலாறு', 'no_history': 'வரலாறு காணப்படவில்லை.',
       'ai_expert_greeting': 'வணக்கம்! நான் க்ரோபோரா AI நிபுணர். இன்று உங்கள் பண்ணையில் நான் எப்படி உதவ முடியும்?', 'ask_anything': 'எதையும் கேளுங்கள்...',
       'confidence': 'நம்பிக்கை', 'reason': 'காரணம்',
-    },
+     'settings': 'Settings', 'offline_mode': 'Offline Mode', 'offline_mode_desc': 'When enabled, the app uses a local AI model without internet.', 'contact_us': 'Contact Us', 'phone': 'Phone', 'email': 'Email', 'app_version': 'Version 1.0.0 • Smart Farming AI', 'copied_phone': 'Phone number copied!', 'copied_email': 'Email copied!' },
     'kn': {
       'app_title': 'ಕ್ರೋಪೋರಾ AI', 'dashboard': 'ಡ್ಯಾಶ್‌ಬೋರ್ಡ್', 'advisories': 'ಸಲಹೆಗಳು', 'ai_chat': 'AI ಚಾಟ್', 'profile': 'ಪ್ರೊಫೈಲ್',
       'farm_health': 'ಕೃಷಿ ಆರೋಗ್ಯ', 'optimal_status': 'ಉತ್ತಮ ಸ್ಥಿತಿ', 'temp': 'ತಾಪಮಾನ', 'humidity': 'ಆರ್ದ್ರತೆ', 'soil': 'ಮಣ್ಣು',
@@ -78,7 +78,7 @@ class TranslationService {
       'history_tabs_advisories': 'ಸಲಹೆಗಳು', 'history_tabs_chat': 'ಚಾಟ್ ಇತಿಹಾಸ', 'no_history': 'ಯಾವುದೇ ಇತಿಹಾಸವಿಲ್ಲ.',
       'ai_expert_greeting': 'ನಮಸ್ಕಾರ! ನಾನು ಕ್ರೋಪೋರಾ AI ತಜ್ಞ. ಇಂದು ನಿಮ್ಮ ಜಮೀನಿಗೆ ನಾನು ಹೇಗೆ ಸಹಾಯ ಮಾಡಬಲ್ಲೆ?', 'ask_anything': 'ಏನನ್ನಾದರೂ ಕೇಳಿ...',
       'confidence': 'ವಿಶ್ವಾಸ', 'reason': 'ಕಾರಣ',
-    },
+     'settings': 'Settings', 'offline_mode': 'Offline Mode', 'offline_mode_desc': 'When enabled, the app uses a local AI model without internet.', 'contact_us': 'Contact Us', 'phone': 'Phone', 'email': 'Email', 'app_version': 'Version 1.0.0 • Smart Farming AI', 'copied_phone': 'Phone number copied!', 'copied_email': 'Email copied!' },
     'ml': {
       'app_title': 'ക്രോപോറ AI', 'dashboard': 'ഡാഷ്‌ബോർഡ്', 'advisories': 'ഉപദേശങ്ങൾ', 'ai_chat': 'AI ചാറ്റ്', 'profile': 'പ്രൊഫൈൽ',
       'farm_health': 'ഫാം ആരോഗ്യം', 'optimal_status': 'മികച്ച അവസ്ഥ', 'temp': 'താപനില', 'humidity': 'ഈർപ്പം', 'soil': 'മണ്ണ്',
@@ -91,7 +91,7 @@ class TranslationService {
       'history_tabs_advisories': 'ഉപദേശങ്ങൾ', 'history_tabs_chat': 'ചാറ്റ് ചരിത്രം', 'no_history': 'ചരിത്രമൊന്നും കണ്ടെത്തിയില്ല.',
       'ai_expert_greeting': 'നമസ്കാരം! ഞാൻ ക്രോപോറ AI വിദഗ്ദ്ധനാണ്. ഇന്ന് നിങ്ങളുടെ കൃഷിയിടത്തിൽ എനിക്ക് എങ്ങനെ സഹായിക്കാനാകും?', 'ask_anything': 'എന്തും ചോദിക്കുക...',
       'confidence': 'ആത്മവിശ്വാസം', 'reason': 'കാരണം',
-    },
+     'settings': 'Settings', 'offline_mode': 'Offline Mode', 'offline_mode_desc': 'When enabled, the app uses a local AI model without internet.', 'contact_us': 'Contact Us', 'phone': 'Phone', 'email': 'Email', 'app_version': 'Version 1.0.0 • Smart Farming AI', 'copied_phone': 'Phone number copied!', 'copied_email': 'Email copied!' },
     'mr': {
       'app_title': 'क्रोपोरा AI', 'dashboard': 'डॅशबोर्ड', 'advisories': 'सल्ले', 'ai_chat': 'AI चॅट', 'profile': 'प्रोफाइल',
       'farm_health': 'शेताचे आरोग्य', 'optimal_status': 'इष्टतम स्थिती', 'temp': 'तापमान', 'humidity': 'आर्द्रता', 'soil': 'माती',
@@ -104,7 +104,7 @@ class TranslationService {
       'history_tabs_advisories': 'सल्ले', 'history_tabs_chat': 'चॅट इतिहास', 'no_history': 'कोणताही इतिहास आढळला नाही.',
       'ai_expert_greeting': 'नमस्कार! मी क्रोपोरा AI तज्ञ आहे. आज मी तुमच्या शेतासाठी कशी मदत करू शकेन?', 'ask_anything': 'काहीही विचारा...',
       'confidence': 'आत्मविश्वास', 'reason': 'कारण',
-    },
+     'settings': 'Settings', 'offline_mode': 'Offline Mode', 'offline_mode_desc': 'When enabled, the app uses a local AI model without internet.', 'contact_us': 'Contact Us', 'phone': 'Phone', 'email': 'Email', 'app_version': 'Version 1.0.0 • Smart Farming AI', 'copied_phone': 'Phone number copied!', 'copied_email': 'Email copied!' },
     'gu': {
       'app_title': 'ક્રોપોરા AI', 'dashboard': 'ડેશબોર્ડ', 'advisories': 'સલાહ', 'ai_chat': 'AI ચેટ', 'profile': 'પ્રોફાઇલ',
       'farm_health': 'ખેતરનું સ્વાસ્થ્ય', 'optimal_status': 'શ્રેષ્ઠ સ્થિતિ', 'temp': 'તાપમાન', 'humidity': 'ભેજ', 'soil': 'માટી',
@@ -117,7 +117,7 @@ class TranslationService {
       'history_tabs_advisories': 'સલાહ', 'history_tabs_chat': 'ચેટ ઇતિહાસ', 'no_history': 'કોઈ ઇતિહાસ મળ્યો નથી.',
       'ai_expert_greeting': 'નમસ્તે! હું ક્રોપોરા AI નિષ્ણાત છું. આજે હું તમારા ખેતર માટે કેવી રીતે મદદ કરી શકું?', 'ask_anything': 'કંઈપણ પૂછો...',
       'confidence': 'આત્મવિશ્વાસ', 'reason': 'કારણ',
-    },
+     'settings': 'Settings', 'offline_mode': 'Offline Mode', 'offline_mode_desc': 'When enabled, the app uses a local AI model without internet.', 'contact_us': 'Contact Us', 'phone': 'Phone', 'email': 'Email', 'app_version': 'Version 1.0.0 • Smart Farming AI', 'copied_phone': 'Phone number copied!', 'copied_email': 'Email copied!' },
     'pa': {
       'app_title': 'ਕ੍ਰੋਪੋਰਾ AI', 'dashboard': 'ਡੈਸ਼ਬੋਰਡ', 'advisories': 'ਸਲਾਹਾਂ', 'ai_chat': 'AI ਚੈਟ', 'profile': 'ਪ੍ਰੋਫਾਈਲ',
       'farm_health': 'ਖੇਤ ਦੀ ਸਿਹਤ', 'optimal_status': 'ਉੱਤਮ ਸਥਿਤੀ', 'temp': 'ਤਾਪਮਾਨ', 'humidity': 'ਨਮੀ', 'soil': 'ਮਿੱਟੀ',
@@ -130,7 +130,7 @@ class TranslationService {
       'history_tabs_advisories': 'ਸਲਾਹਾਂ', 'history_tabs_chat': 'ਚੈਟ ਇਤਿਹਾਸ', 'no_history': 'ਕੋਈ ਇਤਿਹਾਸ ਨਹੀਂ ਮਿਲਿਆ।',
       'ai_expert_greeting': 'ਸਤ ਸ੍ਰੀ ਅਕਾਲ! ਮੈਂ ਕ੍ਰੋਪੋਰਾ AI ਮਾਹਰ ਹਾਂ। ਅੱਜ ਮੈਂ ਤੁਹਾਡੇ ਖੇਤ ਵਿੱਚ ਕਿਵੇਂ ਮਦਦ ਕਰ ਸਕਦਾ ਹਾਂ?', 'ask_anything': 'ਕੁਝ ਵੀ ਪੁੱਛੋ...',
       'confidence': 'ਵਿਸ਼ਵਾਸ', 'reason': 'ਕਾਰਨ',
-    },
+     'settings': 'Settings', 'offline_mode': 'Offline Mode', 'offline_mode_desc': 'When enabled, the app uses a local AI model without internet.', 'contact_us': 'Contact Us', 'phone': 'Phone', 'email': 'Email', 'app_version': 'Version 1.0.0 • Smart Farming AI', 'copied_phone': 'Phone number copied!', 'copied_email': 'Email copied!' },
     'bn': {
       'app_title': 'ক্রোপোরা AI', 'dashboard': 'ড্যাশবোর্ড', 'advisories': 'পরামর্শ', 'ai_chat': 'AI চ্যাট', 'profile': 'প্রোফাইল',
       'farm_health': 'খামারের স্বাস্থ্য', 'optimal_status': 'সর্বোত্তম অবস্থা', 'temp': 'তাপমাত্রা', 'humidity': 'আর্দ্রতা', 'soil': 'মাটি',
@@ -143,7 +143,7 @@ class TranslationService {
       'history_tabs_advisories': 'পরামর্শ', 'history_tabs_chat': 'চ্যাট ইতিহাস', 'no_history': 'কোনো ইতিহাস পাওয়া যায়নি।',
       'ai_expert_greeting': 'নমস্কার! আমি ক্রোপোরা AI বিশেষজ্ঞ। আজ আপনার খামারের ব্যাপারে আমি কীভাবে সাহায্য করতে পারি?', 'ask_anything': 'যেকোনো কিছু জিজ্ঞাসা করুন...',
       'confidence': 'বিশ্বাস', 'reason': 'কারণ',
-    },
+     'settings': 'Settings', 'offline_mode': 'Offline Mode', 'offline_mode_desc': 'When enabled, the app uses a local AI model without internet.', 'contact_us': 'Contact Us', 'phone': 'Phone', 'email': 'Email', 'app_version': 'Version 1.0.0 • Smart Farming AI', 'copied_phone': 'Phone number copied!', 'copied_email': 'Email copied!' },
     'or': {
       'app_title': 'କ୍ରୋପୋରା AI', 'dashboard': 'ଡ୍ୟାସବୋର୍ଡ', 'advisories': 'ପରାମର୍ଶ', 'ai_chat': 'AI ଚାଟ୍', 'profile': 'ପ୍ରୋଫାଇଲ୍',
       'farm_health': 'ଫାର୍ମ ସ୍ୱାସ୍ଥ୍ୟ', 'optimal_status': 'ଉତ୍ତମ ସ୍ଥିତି', 'temp': 'ତାପମାତ୍ରା', 'humidity': 'ଆର୍ଦ୍ରତା', 'soil': 'ମାଟି',
@@ -156,7 +156,7 @@ class TranslationService {
       'history_tabs_advisories': 'ପରାମର୍ଶ', 'history_tabs_chat': 'ଚାଟ୍ ଇତିହାସ', 'no_history': 'କୌଣସି ଇତିହାସ ମିଳିଲା ନାହିଁ.',
       'ai_expert_greeting': 'ନମସ୍କାର! ମୁଁ କ୍ରୋପୋରା AI ବିଶେଷଜ୍ଞ। ଆଜି ମୁଁ ଆପଣଙ୍କ ଫାର୍ମରେ କିପରି ସାହାଯ୍ୟ କରିପାରିବି?', 'ask_anything': 'କିଛି ବି ପଚାରନ୍ତୁ...',
       'confidence': 'ବିଶ୍ୱାସ', 'reason': 'କାରଣ',
-    },
+     'settings': 'Settings', 'offline_mode': 'Offline Mode', 'offline_mode_desc': 'When enabled, the app uses a local AI model without internet.', 'contact_us': 'Contact Us', 'phone': 'Phone', 'email': 'Email', 'app_version': 'Version 1.0.0 • Smart Farming AI', 'copied_phone': 'Phone number copied!', 'copied_email': 'Email copied!' },
     'as': {
       'app_title': 'ক্ৰোপোৰা AI', 'dashboard': 'ডেচবৰ্ড', 'advisories': 'পৰামৰ্শ', 'ai_chat': 'AI চেট', 'profile': 'প্ৰফাইল',
       'farm_health': 'কৃষি স্বাস্থ্য', 'optimal_status': 'সৰ্বোত্তম অৱস্থা', 'temp': 'তাপমাত্ৰা', 'humidity': 'আৰ্দ্ৰতা', 'soil': 'মাটি',
@@ -169,7 +169,7 @@ class TranslationService {
       'history_tabs_advisories': 'পৰামৰ্শ', 'history_tabs_chat': 'চেট ইতিহাস', 'no_history': 'কোনো ইতিহাস পোৱা নগ’ল।',
       'ai_expert_greeting': 'নমস্কাৰ! মই ক্ৰোপোৰা AI বিশেষজ্ঞ। আজি মই আপোনাৰ পথাৰত কেনেকৈ সহায় কৰিব পাৰো?', 'ask_anything': 'যিকোনো কথা সোধক...',
       'confidence': 'বিশ্বাস', 'reason': 'কাৰণ',
-    },
+     'settings': 'Settings', 'offline_mode': 'Offline Mode', 'offline_mode_desc': 'When enabled, the app uses a local AI model without internet.', 'contact_us': 'Contact Us', 'phone': 'Phone', 'email': 'Email', 'app_version': 'Version 1.0.0 • Smart Farming AI', 'copied_phone': 'Phone number copied!', 'copied_email': 'Email copied!' },
     'ur': {
       'app_title': 'کروپورا AI', 'dashboard': 'ڈیش بورڈ', 'advisories': 'مشورے', 'ai_chat': 'AI چیٹ', 'profile': 'پروفائل',
       'farm_health': 'کھیت کی صحت', 'optimal_status': 'بہترین حالت', 'temp': 'درجہ حرارت', 'humidity': 'نمی', 'soil': 'مٹی',
@@ -182,7 +182,7 @@ class TranslationService {
       'history_tabs_advisories': 'مشورے', 'history_tabs_chat': 'چیٹ کی تاریخ', 'no_history': 'کوئی تاریخ نہیں ملی۔',
       'ai_expert_greeting': 'ہیلو! میں کروپورا AI ماہر ہوں۔ آج میں آپ کے کھیت کے لیے کیسے مدد کر سکتا ہوں؟', 'ask_anything': 'کچھ بھی پوچھیں...',
       'confidence': 'اعتماد', 'reason': 'وجہ',
-    },
+     'settings': 'Settings', 'offline_mode': 'Offline Mode', 'offline_mode_desc': 'When enabled, the app uses a local AI model without internet.', 'contact_us': 'Contact Us', 'phone': 'Phone', 'email': 'Email', 'app_version': 'Version 1.0.0 • Smart Farming AI', 'copied_phone': 'Phone number copied!', 'copied_email': 'Email copied!' },
   };
 
   static String translate(BuildContext context, String key) {

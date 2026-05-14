@@ -43,25 +43,25 @@ class AppTheme {
         filled: true,
         fillColor: Colors.grey.shade100,
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(20),
           borderSide: BorderSide.none,
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(20),
           borderSide: BorderSide.none,
         ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(20),
           borderSide: const BorderSide(color: AppColors.primary, width: 2),
         ),
-        contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 18),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
       ),
       cardTheme: CardThemeData(
         color: AppColors.surface,
-        elevation: 2,
-        shadowColor: Colors.black.withOpacity(0.1),
+        elevation: 8,
+        shadowColor: AppColors.primary.withOpacity(0.08),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(24),
         ),
       ),
     );
@@ -106,27 +106,27 @@ class AppTheme {
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: Colors.grey.shade900,
+        fillColor: const Color(0xFF1A1A1A),
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(20),
           borderSide: BorderSide.none,
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(20),
           borderSide: BorderSide.none,
         ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(20),
           borderSide: const BorderSide(color: AppColors.primary, width: 2),
         ),
-        contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 18),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
       ),
       cardTheme: CardThemeData(
-        color: const Color(0xFF252525),
-        elevation: 2,
-        shadowColor: Colors.black.withOpacity(0.3),
+        color: const Color(0xFF222222),
+        elevation: 8,
+        shadowColor: Colors.black.withOpacity(0.4),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(24),
         ),
       ),
     );

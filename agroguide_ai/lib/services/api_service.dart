@@ -75,7 +75,14 @@ class ApiService {
   Future<String> chatWithExpert(String message, {bool offlineModeFallback = false, String targetLang = 'en'}) async {
     // 1. Connectivity & Settings Check
     final connectivityResult = await Connectivity().checkConnectivity();
-    final bool hasInternet = connectivityResult != ConnectivityResult.none;
+    
+    bool hasInternet = true;
+    if (connectivityResult is List) {
+      final list = connectivityResult as List;
+      hasInternet = list.isNotEmpty && !list.every((e) => e.toString() == 'ConnectivityResult.none');
+    } else {
+      hasInternet = connectivityResult.toString() != 'ConnectivityResult.none';
+    }
 
     // 2. Offline Mode Logic
     if (offlineModeFallback || !hasInternet) {

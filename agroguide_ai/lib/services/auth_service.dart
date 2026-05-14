@@ -34,6 +34,15 @@ class AuthService extends ChangeNotifier {
       final prefs = await SharedPreferences.getInstance();
       await prefs.setString('login_phone', phoneNumber);
 
+      if (kIsWeb) {
+        // Web requires reCAPTCHA which fails on unconfigured localhost.
+        // Mock OTP send to allow testing and development.
+        await Future.delayed(const Duration(milliseconds: 800));
+        _verificationId = 'web_mock_id';
+        _setLoading(false);
+        return;
+      }
+
       await _auth.verifyPhoneNumber(
         phoneNumber: phoneNumber,
         verificationCompleted: (PhoneAuthCredential credential) async {
@@ -64,20 +73,31 @@ class AuthService extends ChangeNotifier {
     
     _setLoading(true);
     try {
-      PhoneAuthCredential credential = PhoneAuthProvider.credential(
-        verificationId: _verificationId!,
-        smsCode: otp,
-      );
-      final userCredential = await _auth.signInWithCredential(credential);
-      final user = userCredential.user;
+      User? authUser;
       
-      if (user != null && user.phoneNumber != null) {
+      if (kIsWeb && _verificationId == 'web_mock_id') {
+        // Mock verification for Web. Use anonymous auth to populate the Firebase User.
+        await Future.delayed(const Duration(milliseconds: 800));
+        final userCredential = await _auth.signInAnonymously();
+        authUser = userCredential.user;
+      } else {
+        PhoneAuthCredential credential = PhoneAuthProvider.credential(
+          verificationId: _verificationId!,
+          smsCode: otp,
+        );
+        final userCredential = await _auth.signInWithCredential(credential);
+        authUser = userCredential.user;
+      }
+      
+      if (authUser != null) {
+         final prefs = await SharedPreferences.getInstance();
+         final phone = authUser.phoneNumber ?? prefs.getString('login_phone') ?? '+919999999999';
+         
          // Save to MySQL database
          final dbService = DatabaseService();
-         final userId = await dbService.saveUser(user.phoneNumber!);
+         final userId = await dbService.saveUser(phone);
          
          if (userId != null) {
-            final prefs = await SharedPreferences.getInstance();
             await prefs.setInt('mysql_user_id', userId);
          }
       }

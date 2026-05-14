@@ -7,6 +7,7 @@ import '../../../../services/database_service.dart';
 import '../../../../services/notification_service.dart';
 import '../../../../services/translation_service.dart';
 import '../../../../services/recommendations_service.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class CropRecommendationForm extends StatefulWidget {
   const CropRecommendationForm({super.key});
@@ -37,6 +38,37 @@ class _CropRecommendationFormState extends State<CropRecommendationForm> {
   // Per-crop reminder scheduling state
   final Map<int, bool> _isSchedulingReminder = {};
   final Map<int, bool> _reminderDone = {};
+
+  @override
+  void initState() {
+    super.initState();
+    _fetchWeatherData();
+  }
+
+  Future<void> _fetchWeatherData() async {
+    final notificationService = Provider.of<NotificationService>(context, listen: false);
+    final apiService = Provider.of<ApiService>(context, listen: false);
+    
+    try {
+      final position = await notificationService.getCurrentLocation();
+      if (position != null) {
+        final weather = await apiService.getWeather(position.latitude, position.longitude);
+        if (mounted && weather.isNotEmpty) {
+          setState(() {
+            if (weather.containsKey('temperature')) {
+              _temp = (weather['temperature'] as num).toDouble().clamp(0.0, 50.0);
+            }
+            if (weather.containsKey('humidity')) {
+              _humidity = (weather['humidity'] as num).toDouble().clamp(0.0, 100.0);
+            }
+          });
+        }
+      }
+    } catch (e) {
+      // Graceful fallback: maintain default values if offline or error occurs
+      debugPrint('Failed to fetch real-time weather: $e');
+    }
+  }
 
   Map<String, dynamic> get _inputData => {
     'N': _n, 'P': _p, 'K': _k,
@@ -131,20 +163,20 @@ class _CropRecommendationFormState extends State<CropRecommendationForm> {
 
       await notificationService.scheduleFertilizerReminder(
         id: baseId + 1,
-        title: 'CropOra — Fertilizer Alert',
-        body: 'Apply basal dose of $fertilizer to your $cropName.',
+        title: '🌱 $cropName Needs Fertilizer!',
+        body: 'Apply Basal Dose (33%) of $fertilizer today. Phase: Initial Cultivation.',
         scheduledDate: DateTime.now().add(const Duration(minutes: 1)),
       );
       await notificationService.scheduleFertilizerReminder(
         id: baseId + 2,
-        title: 'CropOra — Fertilizer Alert',
-        body: 'Apply 2nd dose of $fertilizer to your $cropName.',
+        title: '🌱 $cropName Needs Fertilizer!',
+        body: 'Apply 2nd Dose (33%) of $fertilizer today. Phase: Vegetative.',
         scheduledDate: DateTime.now().add(Duration(days: dose2Days)),
       );
       await notificationService.scheduleFertilizerReminder(
         id: baseId + 3,
-        title: 'CropOra — Fertilizer Alert',
-        body: 'Apply final dose of $fertilizer to your $cropName.',
+        title: '🌱 $cropName Needs Fertilizer!',
+        body: 'Apply Final Dose (34%) of $fertilizer today. Phase: Flowering/Fruiting.',
         scheduledDate: DateTime.now().add(Duration(days: dose3Days)),
       );
 
@@ -217,20 +249,26 @@ class _CropRecommendationFormState extends State<CropRecommendationForm> {
             ),
           ],
 
-          _buildSlider('Nitrogen (N)', _n, 0, 150, (v) => setState(() => _n = v)),
-          _buildSlider('Phosphorus (P)', _p, 0, 150, (v) => setState(() => _p = v)),
-          _buildSlider('Potassium (K)', _k, 0, 150, (v) => setState(() => _k = v)),
-          _buildSlider('Temperature (°C)', _temp, 0, 50, (v) => setState(() => _temp = v)),
-          _buildSlider('Humidity (%)', _humidity, 0, 100, (v) => setState(() => _humidity = v)),
-          _buildSlider('Rainfall (mm)', _rainfall, 0, 300, (v) => setState(() => _rainfall = v)),
-          _buildSlider('Soil pH', _ph, 0, 14, (v) => setState(() => _ph = v), divisions: 140),
+          _buildSlider('Nitrogen (N)', _n, 0, 150, (v) => setState(() => _n = v)).animate().fade(delay: 100.ms),
+          _buildSlider('Phosphorus (P)', _p, 0, 150, (v) => setState(() => _p = v)).animate().fade(delay: 200.ms),
+          _buildSlider('Potassium (K)', _k, 0, 150, (v) => setState(() => _k = v)).animate().fade(delay: 300.ms),
+          _buildSlider('Temperature (°C)', _temp, 0, 50, (v) => setState(() => _temp = v)).animate().fade(delay: 400.ms),
+          _buildSlider('Humidity (%)', _humidity, 0, 100, (v) => setState(() => _humidity = v)).animate().fade(delay: 500.ms),
+          _buildSlider('Rainfall (mm)', _rainfall, 0, 300, (v) => setState(() => _rainfall = v)).animate().fade(delay: 600.ms),
+          _buildSlider('Soil pH', _ph, 0, 14, (v) => setState(() => _ph = v), divisions: 140).animate().fade(delay: 700.ms),
           const SizedBox(height: 24),
           ElevatedButton(
             onPressed: _isLoading ? null : _submitData,
+            style: ElevatedButton.styleFrom(
+              padding: const EdgeInsets.symmetric(vertical: 18),
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+              elevation: 4,
+              shadowColor: AppColors.primary.withOpacity(0.4),
+            ),
             child: _isLoading
-                ? const CircularProgressIndicator(color: Colors.white)
-                : Text(TranslationService.translate(context, 'recommend_crop')),
-          ),
+                ? const SizedBox(width: 24, height: 24, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
+                : Text(TranslationService.translate(context, 'recommend_crop'), style: const TextStyle(fontSize: 16)),
+          ).animate().fade(delay: 800.ms).slideY(begin: 0.2, end: 0),
           const SizedBox(height: 40),
         ],
       ),
@@ -252,15 +290,22 @@ class _CropRecommendationFormState extends State<CropRecommendationForm> {
     final cardBg = isDark ? Colors.green.shade900.withOpacity(0.2) : Colors.green.shade50;
     final cardBorder = isDark ? Colors.green.shade800 : Colors.green.shade200;
 
-    return Card(
-      color: cardBg,
-      margin: const EdgeInsets.only(bottom: 14),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20),
-        side: BorderSide(color: cardBorder),
+    return Container(
+      margin: const EdgeInsets.only(bottom: 16),
+      decoration: BoxDecoration(
+        color: cardBg,
+        borderRadius: BorderRadius.circular(24),
+        border: Border.all(color: cardBorder, width: 1.5),
+        boxShadow: [
+          BoxShadow(
+            color: isDark ? Colors.black26 : Colors.green.shade100.withOpacity(0.5),
+            blurRadius: 15,
+            offset: const Offset(0, 8),
+          ),
+        ],
       ),
       child: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -421,7 +466,7 @@ class _CropRecommendationFormState extends State<CropRecommendationForm> {
           ],
         ),
       ),
-    );
+    ).animate().scale(curve: Curves.easeOutBack, duration: 500.ms).fadeIn();
   }
 
   Widget _buildSlider(String label, double value, double min, double max, ValueChanged<double> onChanged,

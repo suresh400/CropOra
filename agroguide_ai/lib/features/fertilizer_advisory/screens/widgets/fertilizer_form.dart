@@ -7,6 +7,7 @@ import '../../../../services/translation_service.dart';
 import '../../../../services/recommendations_service.dart';
 import 'package:provider/provider.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class FertilizerAdvisoryForm extends StatefulWidget {
   const FertilizerAdvisoryForm({super.key});
@@ -104,22 +105,22 @@ class _FertilizerAdvisoryFormState extends State<FertilizerAdvisoryForm> {
 
       await notificationService.scheduleFertilizerReminder(
         id: DateTime.now().millisecondsSinceEpoch.remainder(100000) + 1,
-        title: TranslationService.translate(context, 'fertilizer_alert'),
-        body: 'Apply basal dose of $fertilizer to your $_cropType.',
+        title: '🌱 $_cropType Needs Fertilizer!',
+        body: 'Apply Basal Dose (33%) of $fertilizer today. Phase: Initial Cultivation.',
         scheduledDate: DateTime.now().add(const Duration(minutes: 1)),
       );
 
       await notificationService.scheduleFertilizerReminder(
         id: DateTime.now().millisecondsSinceEpoch.remainder(100000) + 2,
-        title: TranslationService.translate(context, 'fertilizer_alert'),
-        body: 'Apply 2nd dose of $fertilizer to your $_cropType.',
+        title: '🌱 $_cropType Needs Fertilizer!',
+        body: 'Apply 2nd Dose (33%) of $fertilizer today. Phase: Vegetative.',
         scheduledDate: DateTime.now().add(Duration(days: dose2Days)),
       );
 
       await notificationService.scheduleFertilizerReminder(
         id: DateTime.now().millisecondsSinceEpoch.remainder(100000) + 3,
-        title: TranslationService.translate(context, 'fertilizer_alert'),
-        body: 'Apply final dose of $fertilizer to your $_cropType.',
+        title: '🌱 $_cropType Needs Fertilizer!',
+        body: 'Apply Final Dose (34%) of $fertilizer today. Phase: Flowering/Fruiting.',
         scheduledDate: DateTime.now().add(Duration(days: dose3Days)),
       );
 
@@ -170,30 +171,36 @@ class _FertilizerAdvisoryFormState extends State<FertilizerAdvisoryForm> {
                 child: _buildDropdown('Crop Type', _cropType, _cropTypes, (val) => setState(() => _cropType = val!)),
               ),
             ],
-          ),
+          ).animate().fade(delay: 50.ms),
           const SizedBox(height: 16),
-          _buildDropdown('Season', _season, _seasons, (val) => setState(() => _season = val!)),
+          _buildDropdown('Season', _season, _seasons, (val) => setState(() => _season = val!)).animate().fade(delay: 100.ms),
 
           const SizedBox(height: 16),
-          _buildSlider('Nitrogen (N) Content', _n, 0, 150, (val) => setState(() => _n = val)),
-          _buildSlider('Phosphorus (P) Content', _p, 0, 150, (val) => setState(() => _p = val)),
-          _buildSlider('Potassium (K) Content', _k, 0, 150, (val) => setState(() => _k = val)),
-          _buildSlider('Soil Moisture (%)', _moisture, 0, 100, (val) => setState(() => _moisture = val)),
-          _buildSlider('Soil pH', _ph, 0, 14, (val) => setState(() => _ph = val), divisions: 140),
-          _buildSlider('Rainfall (mm)', _rainfall, 0, 1000, (val) => setState(() => _rainfall = val)),
-          _buildSlider('Organic Carbon', _organicCarbon, 0, 2, (val) => setState(() => _organicCarbon = val)),
-          _buildSlider('Electrical Cond. (EC)', _ec, 0, 2, (val) => setState(() => _ec = val)),
-          _buildSlider('Temperature (°C)', _temp, 0, 50, (val) => setState(() => _temp = val)),
-          _buildSlider('Humidity (%)', _humidity, 0, 100, (val) => setState(() => _humidity = val)),
+          _buildSlider('Nitrogen (N) Content', _n, 0, 150, (val) => setState(() => _n = val)).animate().fade(delay: 150.ms),
+          _buildSlider('Phosphorus (P) Content', _p, 0, 150, (val) => setState(() => _p = val)).animate().fade(delay: 200.ms),
+          _buildSlider('Potassium (K) Content', _k, 0, 150, (val) => setState(() => _k = val)).animate().fade(delay: 250.ms),
+          _buildSlider('Soil Moisture (%)', _moisture, 0, 100, (val) => setState(() => _moisture = val)).animate().fade(delay: 300.ms),
+          _buildSlider('Soil pH', _ph, 0, 14, (val) => setState(() => _ph = val), divisions: 140).animate().fade(delay: 350.ms),
+          _buildSlider('Rainfall (mm)', _rainfall, 0, 1000, (val) => setState(() => _rainfall = val)).animate().fade(delay: 400.ms),
+          _buildSlider('Organic Carbon', _organicCarbon, 0, 2, (val) => setState(() => _organicCarbon = val)).animate().fade(delay: 450.ms),
+          _buildSlider('Electrical Cond. (EC)', _ec, 0, 2, (val) => setState(() => _ec = val)).animate().fade(delay: 500.ms),
+          _buildSlider('Temperature (°C)', _temp, 0, 50, (val) => setState(() => _temp = val)).animate().fade(delay: 550.ms),
+          _buildSlider('Humidity (%)', _humidity, 0, 100, (val) => setState(() => _humidity = val)).animate().fade(delay: 600.ms),
 
           const SizedBox(height: 24),
           ElevatedButton(
             onPressed: _isLoading ? null : _submitData,
+            style: ElevatedButton.styleFrom(
+              padding: const EdgeInsets.symmetric(vertical: 18),
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+              elevation: 4,
+              shadowColor: AppColors.primary.withOpacity(0.4),
+            ),
             child: _isLoading
-              ? const CircularProgressIndicator(color: Colors.white)
-              : Text(TranslationService.translate(context, 'get_fertilizer_advice')),
-          ),
-          const SizedBox(height: 40),
+              ? const SizedBox(width: 24, height: 24, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
+              : Text(TranslationService.translate(context, 'get_fertilizer_advice'), style: const TextStyle(fontSize: 16)),
+          ).animate().fade(delay: 700.ms).slideY(begin: 0.2, end: 0),
+          const SizedBox(height: 120), // Increased padding for floating nav bar
         ],
       ),
     );
@@ -207,11 +214,19 @@ class _FertilizerAdvisoryFormState extends State<FertilizerAdvisoryForm> {
     final cardBg = isDark ? Colors.blue.shade900.withOpacity(0.25) : Colors.blue.shade50;
     final cardBorder = isDark ? Colors.blue.shade900 : Colors.blue.shade200;
 
-    return Card(
-      color: cardBg,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20),
-        side: BorderSide(color: cardBorder),
+    return Container(
+      margin: const EdgeInsets.only(bottom: 16),
+      decoration: BoxDecoration(
+        color: cardBg,
+        borderRadius: BorderRadius.circular(24),
+        border: Border.all(color: cardBorder, width: 1.5),
+        boxShadow: [
+          BoxShadow(
+            color: isDark ? Colors.black26 : Colors.blue.shade100.withOpacity(0.5),
+            blurRadius: 15,
+            offset: const Offset(0, 8),
+          ),
+        ],
       ),
       child: Padding(
         padding: const EdgeInsets.all(20.0),
@@ -290,7 +305,7 @@ class _FertilizerAdvisoryFormState extends State<FertilizerAdvisoryForm> {
           ],
         ),
       ),
-    );
+    ).animate().scale(curve: Curves.easeOutBack, duration: 500.ms).fadeIn();
   }
 
   Widget _buildDropdown(String label, String value, List<String> items, ValueChanged<String?> onChanged) {

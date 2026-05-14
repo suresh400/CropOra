@@ -313,18 +313,22 @@ class _WeatherDetailsScreenState extends State<WeatherDetailsScreen> {
   Widget _buildSunriseSunsetCard() {
     final sunrise = _data?['sunrise'] ?? 0;
     final sunset = _data?['sunset'] ?? 0;
+    final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.orange.shade100, Colors.purple.shade100],
+            colors: [
+              isDark ? Colors.orange.shade900.withOpacity(0.2) : Colors.orange.shade100, 
+              isDark ? Colors.purple.shade900.withOpacity(0.2) : Colors.purple.shade100
+            ],
             begin: Alignment.centerLeft,
             end: Alignment.centerRight,
           ),
           borderRadius: BorderRadius.circular(20),
-          border: Border.all(color: Colors.orange.shade200),
+          border: Border.all(color: isDark ? Colors.orange.shade800 : Colors.orange.shade200),
         ),
         padding: const EdgeInsets.all(20),
         child: Column(
@@ -344,7 +348,7 @@ class _WeatherDetailsScreenState extends State<WeatherDetailsScreen> {
                 Container(
                   height: 50,
                   width: 1,
-                  color: Colors.orange.shade200,
+                  color: isDark ? Colors.orange.shade800 : Colors.orange.shade200,
                 ),
                 _buildSunTimeItem(
                   PhosphorIconsFill.moon,
@@ -400,13 +404,15 @@ class _WeatherDetailsScreenState extends State<WeatherDetailsScreen> {
       insights.add('💨 Strong winds — secure tall crops and avoid spraying chemicals.');
     }
 
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return Padding(
       padding: const EdgeInsets.all(16),
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.green.shade50,
+          color: isDark ? Colors.green.shade900.withOpacity(0.15) : Colors.green.shade50,
           borderRadius: BorderRadius.circular(20),
-          border: Border.all(color: Colors.green.shade200),
+          border: Border.all(color: isDark ? Colors.green.shade800 : Colors.green.shade200),
         ),
         padding: const EdgeInsets.all(20),
         child: Column(
@@ -414,7 +420,7 @@ class _WeatherDetailsScreenState extends State<WeatherDetailsScreen> {
           children: [
             Row(
               children: [
-                Icon(PhosphorIconsFill.plant, color: Colors.green.shade700, size: 22),
+                Icon(PhosphorIconsFill.plant, color: isDark ? Colors.green.shade400 : Colors.green.shade700, size: 22),
                 const SizedBox(width: 8),
                 const Text('Farming Insights',
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),

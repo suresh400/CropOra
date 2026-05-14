@@ -20,7 +20,7 @@ class DatabaseService {
     String path = join(await getDatabasesPath(), 'agroguide_app.db');
     return await openDatabase(
       path,
-      version: 3,
+      version: 4,
       onCreate: (db, version) async {
         await _createTables(db);
       },
@@ -38,6 +38,18 @@ class DatabaseService {
                timestamp TEXT
              )
            ''');
+        }
+        if (oldVersion < 4) {
+          await db.execute('''
+            CREATE TABLE IF NOT EXISTS ai_cache(
+              id INTEGER PRIMARY KEY AUTOINCREMENT,
+              question TEXT UNIQUE,
+              answer TEXT,
+              source TEXT,
+              timestamp TEXT,
+              used_count INTEGER DEFAULT 1
+            )
+          ''');
         }
       }
     );
@@ -70,6 +82,18 @@ class DatabaseService {
         fertilizer_name TEXT,
         cultivation_days INTEGER,
         timestamp TEXT
+      )
+    ''');
+
+    // AI Q&A cache for instant repeated-question responses
+    await db.execute('''
+      CREATE TABLE IF NOT EXISTS ai_cache(
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        question TEXT UNIQUE,
+        answer TEXT,
+        source TEXT,
+        timestamp TEXT,
+        used_count INTEGER DEFAULT 1
       )
     ''');
   }
